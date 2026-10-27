@@ -16,6 +16,7 @@
     --ink: #2b2a27;
     --muted: #8a8478;
     --accent: #c2553f;
+    --accent-soft: #f7e1da;
     --done: #b5afa3;
     --shadow: 0 1px 2px rgba(60, 50, 30, .06), 0 8px 24px rgba(60, 50, 30, .08);
   }
@@ -28,6 +29,7 @@
       --ink: #ece7dd;
       --muted: #9a9387;
       --accent: #e98a72;
+      --accent-soft: #43292280;
       --done: #6b665d;
       --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .3);
     }
@@ -49,7 +51,7 @@
     line-height: 1;
     margin: 0 0 6px;
   }
-  .hoje-data { color: var(--muted); font-size: 15px; text-transform: capitalize; }
+  .hoje-data { color: var(--muted); font-size: 15px; }
 
   .folha {
     background: var(--paper);
@@ -57,14 +59,13 @@
     box-shadow: var(--shadow);
     padding: 20px 20px 16px 44px;
     margin-bottom: 20px;
-    position: relative;
     background-image: linear-gradient(to right, transparent 31px, var(--margin) 31px, var(--margin) 32px, transparent 32px);
   }
   .folha h2 {
     font-family: Caveat, cursive;
-    font-size: 28px;
+    font-size: 30px;
     line-height: 1.1;
-    margin: 0 0 8px;
+    margin: 0 0 4px;
     display: flex;
     align-items: baseline;
     gap: 10px;
@@ -77,6 +78,14 @@
     color: var(--muted);
   }
   .folha.hoje h2 { color: var(--accent); }
+  .folha h3 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 16px 0 2px;
+  }
 
   ul { list-style: none; margin: 0; padding: 0; }
   li { border-bottom: 1px solid var(--line); }
@@ -113,20 +122,22 @@
   input[type=checkbox]:checked::after { opacity: 1; }
   input[type=checkbox]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   input:checked + span { color: var(--done); text-decoration: line-through; }
+  .prioridade {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 0 7px;
+    border-radius: 99px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    vertical-align: 2px;
+  }
 
   .vazio { color: var(--muted); font-style: italic; padding: 8px 0; margin: 0; }
-  .progresso { font-size: 13px; color: var(--muted); margin-top: 6px; }
-
-  details.anteriores > summary {
-    cursor: pointer;
-    color: var(--muted);
-    font-size: 14px;
-    padding: 8px 0 16px;
-    list-style: none;
-  }
-  details.anteriores > summary::before { content: "▸ "; }
-  details.anteriores[open] > summary::before { content: "▾ "; }
-  details.anteriores .folha { opacity: .8; }
+  .progresso { font-size: 13px; color: var(--muted); margin-top: 10px; }
 </style>
 </head>
 <body>
@@ -141,21 +152,52 @@
 <script>
   // ============================================================
   //  NOTAS — edite só esta parte.
-  //  Cada bloco é um dia ("AAAA-MM-DD") ou "geral" (sem data).
+  //  Cada folha é um dia ("AAAA-MM-DD"), dividida em grupos.
+  //  Item com destaque: { texto: "...", prioridade: true }
   // ============================================================
   const NOTAS = [
-    // { dia: "2026-10-27", itens: ["Exemplo de tarefa"] },
+    {
+      dia: "2026-10-26",
+      grupos: [
+        {
+          titulo: "Para o dia",
+          itens: [
+            "Usar os R$ 500/dia em Total Finanças e Lunex 3 (obrigatório, replicar a campanha que fechou a 2,20)",
+            "Ajuste fino nas campanhas com pag/conv na R03",
+            "Expandir para tópico as campanhas que ainda compram só em domínio",
+            "Escalar Lunex 2 com cuidado (CPA pode aumentar perto das 9h)",
+          ],
+        },
+        {
+          titulo: "Não necessariamente hoje",
+          itens: [
+            { texto: "Levantar % de entrega das campanhas por conversão R01 e R03", prioridade: true },
+            "Desenhar rotas de escala para JN cartão (progressão suave, 20k para 30k)",
+            "Mapear gargalos das pré-vendas (carregamento, custo, ranqueamento, conversão na P1)",
+          ],
+        },
+        {
+          titulo: "Anotações",
+          itens: [
+            "Expandir Lunex para Reino Unido e Canadá",
+            "Conferir perguntas para trocar na presell da Bolviro e da Lunex 2",
+          ],
+        },
+      ],
+    },
   ];
   // ============================================================
 
   const pad = n => String(n).padStart(2, "0");
+  const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
   const agora = new Date();
-  const hojeISO = `${agora.getFullYear()}-${pad(agora.getMonth() + 1)}-${pad(agora.getDate())}`;
-  const paraData = iso => new Date(iso + "T12:00:00");
-  const fmt = (iso, opts) => paraData(iso).toLocaleDateString("pt-BR", opts);
+  const hojeISO = iso(agora);
+  const ontem = new Date(agora); ontem.setDate(agora.getDate() - 1);
+  const ontemISO = iso(ontem);
+  const fmt = (dia, opts) => new Date(dia + "T12:00:00").toLocaleDateString("pt-BR", opts);
 
   document.getElementById("hoje-data").textContent =
-    fmt(hojeISO, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+    "Hoje é " + fmt(hojeISO, { weekday: "long", day: "numeric", month: "long" });
 
   function lerFeitos() {
     try { return JSON.parse(localStorage.getItem("notas-spun-feitos")) || {}; } catch { return {}; }
@@ -165,80 +207,71 @@
   }
   const feitos = lerFeitos();
 
-  function titulo(bloco) {
-    if (bloco.dia === "geral") return { nome: "Geral", sub: "" };
-    const amanha = new Date(agora); amanha.setDate(agora.getDate() + 1);
-    const amanhaISO = `${amanha.getFullYear()}-${pad(amanha.getMonth() + 1)}-${pad(amanha.getDate())}`;
-    const sub = fmt(bloco.dia, { weekday: "long", day: "numeric", month: "short" });
-    if (bloco.dia === hojeISO) return { nome: "Hoje", sub };
-    if (bloco.dia === amanhaISO) return { nome: "Amanhã", sub };
-    return { nome: fmt(bloco.dia, { day: "numeric", month: "long" }), sub: fmt(bloco.dia, { weekday: "long" }) };
-  }
-
   function folha(bloco) {
     const sec = document.createElement("section");
     sec.className = "folha" + (bloco.dia === hojeISO ? " hoje" : "");
-    const t = titulo(bloco);
+
     const h2 = document.createElement("h2");
-    h2.textContent = t.nome;
-    if (t.sub) { const s = document.createElement("small"); s.textContent = t.sub; h2.append(s); }
+    h2.textContent = fmt(bloco.dia, { day: "numeric", month: "long" });
+    const sub = document.createElement("small");
+    const rel = bloco.dia === hojeISO ? "hoje · " : bloco.dia === ontemISO ? "ontem · " : "";
+    sub.textContent = rel + fmt(bloco.dia, { weekday: "long" });
+    h2.append(sub);
     sec.append(h2);
 
-    const ul = document.createElement("ul");
+    const caixas = [];
     const prog = document.createElement("div");
     prog.className = "progresso";
     const atualizar = () => {
-      const marcados = ul.querySelectorAll("input:checked").length;
-      prog.textContent = `${marcados} de ${bloco.itens.length} feitos`;
+      const marcados = caixas.filter(c => c.checked).length;
+      prog.textContent = `${marcados} de ${caixas.length} feitos`;
     };
 
-    bloco.itens.forEach((texto, i) => {
-      const chave = `${bloco.dia}|${i}|${texto}`;
-      const li = document.createElement("li");
-      const label = document.createElement("label");
-      const cb = document.createElement("input");
-      cb.type = "checkbox";
-      cb.checked = !!feitos[chave];
-      cb.addEventListener("change", () => {
-        if (cb.checked) feitos[chave] = 1; else delete feitos[chave];
-        salvarFeitos(feitos);
-        atualizar();
+    bloco.grupos.filter(g => g.itens.length).forEach(grupo => {
+      if (grupo.titulo) {
+        const h3 = document.createElement("h3");
+        h3.textContent = grupo.titulo;
+        sec.append(h3);
+      }
+      const ul = document.createElement("ul");
+      grupo.itens.forEach(item => {
+        const texto = typeof item === "string" ? item : item.texto;
+        const chave = `${bloco.dia}|${texto}`;
+        const li = document.createElement("li");
+        const label = document.createElement("label");
+        const cb = document.createElement("input");
+        cb.type = "checkbox";
+        cb.checked = !!feitos[chave];
+        cb.addEventListener("change", () => {
+          if (cb.checked) feitos[chave] = 1; else delete feitos[chave];
+          salvarFeitos(feitos);
+          atualizar();
+        });
+        caixas.push(cb);
+        const span = document.createElement("span");
+        span.textContent = texto;
+        if (item.prioridade) {
+          const tag = document.createElement("span");
+          tag.className = "prioridade";
+          tag.textContent = "prioridade";
+          span.append(tag);
+        }
+        label.append(cb, span);
+        li.append(label);
+        ul.append(li);
       });
-      const span = document.createElement("span");
-      span.textContent = texto;
-      label.append(cb, span);
-      li.append(label);
-      ul.append(li);
+      sec.append(ul);
     });
-    sec.append(ul);
-    if (bloco.itens.length > 1) { atualizar(); sec.append(prog); }
+
+    if (caixas.length > 1) { atualizar(); sec.append(prog); }
     return sec;
   }
 
+  // Mais recente primeiro; nada some — é só marcar o que foi feito.
   const raiz = document.getElementById("notas");
-  const comItens = NOTAS.filter(b => b.itens && b.itens.length);
-  const proximos = comItens.filter(b => b.dia !== "geral" && b.dia >= hojeISO).sort((a, b) => a.dia.localeCompare(b.dia));
-  const gerais = comItens.filter(b => b.dia === "geral");
-  const anteriores = comItens.filter(b => b.dia !== "geral" && b.dia < hojeISO).sort((a, b) => b.dia.localeCompare(a.dia));
-
-  if (!proximos.some(b => b.dia === hojeISO)) {
-    const vazio = document.createElement("section");
-    vazio.className = "folha hoje";
-    vazio.innerHTML = '<h2>Hoje</h2><p class="vazio">Nada anotado para hoje.</p>';
-    raiz.append(vazio);
-  }
-  proximos.forEach(b => raiz.append(folha(b)));
-  gerais.forEach(b => raiz.append(folha(b)));
-
-  if (anteriores.length) {
-    const det = document.createElement("details");
-    det.className = "anteriores";
-    const sum = document.createElement("summary");
-    sum.textContent = `Dias anteriores (${anteriores.length})`;
-    det.append(sum);
-    anteriores.forEach(b => det.append(folha(b)));
-    raiz.append(det);
-  }
+  const dias = NOTAS.filter(b => b.grupos.some(g => g.itens.length)).sort((a, b) => b.dia.localeCompare(a.dia));
+  if (!dias.length) raiz.innerHTML = '<section class="folha"><p class="vazio">Nada anotado ainda.</p></section>';
+  dias.forEach(b => raiz.append(folha(b)));
 </script>
 </body>
 </html>

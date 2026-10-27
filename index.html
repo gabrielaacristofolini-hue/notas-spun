@@ -13,6 +13,9 @@
     --margem: #e8a0a0;
     --tinta: #2a2a2a;
     --suave: #7a7466;
+    --cartao: #ffffff;
+    --borda: #ddd6c8;
+    --destaque: #3b6fb6;
     --linha: 40px;
   }
   * { box-sizing: border-box; }
@@ -22,10 +25,19 @@
     color: var(--tinta);
     font: 20px/var(--linha) "Segoe UI", system-ui, -apple-system, sans-serif;
   }
-  .papel {
-    max-width: 1000px;
-    min-height: 100vh;
+  .mesa {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    gap: 24px;
+    max-width: 1500px;
     margin: 0 auto;
+    padding: 0 24px 0 0;
+    align-items: start;
+  }
+
+  /* ---------- Bloco de notas ---------- */
+  .papel {
+    min-height: 100vh;
     background-color: var(--papel);
     background-image:
       linear-gradient(to right, transparent 63px, var(--margem) 63px, var(--margem) 65px, transparent 65px),
@@ -44,10 +56,44 @@
     color: var(--suave);
     margin: 0;
   }
-  ul { list-style: none; margin: 0; padding: 0; }
-  li::before { content: "– "; color: var(--suave); }
+  .papel ul { list-style: none; margin: 0; padding: 0; }
+  .papel li::before { content: "– "; color: var(--suave); }
   .vazio { color: var(--suave); font-style: italic; margin: 0; }
 
+  /* ---------- Reunião ---------- */
+  .reuniao {
+    position: sticky;
+    top: 24px;
+    margin-top: 24px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    background: var(--cartao);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 20px 22px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .reuniao h2 { font-size: 18px; margin: 0; line-height: 1.3; }
+  .reuniao .quando { color: var(--suave); font-size: 13px; margin: 2px 0 0; }
+  .reuniao h3 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--destaque);
+    margin: 18px 0 6px;
+  }
+  .reuniao p { margin: 0 0 8px; }
+  .reuniao ul { margin: 0; padding-left: 18px; }
+  .reuniao li { margin-bottom: 6px; }
+  .reuniao li::marker { color: var(--suave); }
+
+  @media (max-width: 900px) {
+    .mesa { grid-template-columns: 1fr; padding: 0; gap: 0; }
+    .papel { min-height: auto; }
+    .reuniao { position: static; max-height: none; margin: 16px; }
+  }
   @media (max-width: 600px) {
     body { font-size: 18px; }
     .papel {
@@ -61,17 +107,45 @@
 </style>
 </head>
 <body>
-<main class="papel">
-  <h1>Notas Spun</h1>
-  <p class="atualizado" id="atualizado"></p>
-  <ul id="notas"></ul>
-</main>
+<div class="mesa">
+  <main class="papel">
+    <h1>Notas Spun</h1>
+    <p class="atualizado" id="atualizado"></p>
+    <ul id="notas"></ul>
+  </main>
+
+  <aside class="reuniao">
+    <h2>Daily Aquisição · Squad M</h2>
+    <p class="quando">27/10 · Gabriel e Gustavo · 20 min</p>
+
+    <h3>Resumo</h3>
+    <p>As campanhas R03 que pagam por conversão amanheceram zeradas mesmo com aumento de lance (agora em R$ 8). O volume está concentrado em pagamento por conversão: dos ~R$ 72 mil gastos de 23 a 26/10, só ~R$ 16 mil foram na estrutura volátil (cerca de 78/22).</p>
+    <p>A expansão de segmentação (tópico de cartão de crédito dentro de finanças) levou a R01 a ~R$ 18 mil/dia sem precisar de estrutura nova. O funil inicial está rentabilizando entre 98% e 102%; o gargalo é broadcast/retenção, então a escala fica nos ~20 mil até o ROAS melhorar.</p>
+
+    <h3>Decisões</h3>
+    <ul>
+      <li>Buscar 50/50 entre pagamento por conversão e estrutura volátil (Gustavo pediu no mínimo 60/40).</li>
+      <li>Escalar abrindo novos grupos dentro das campanhas que já existem, em vez de criar campanhas do zero.</li>
+      <li>Lunex 3: adicionar Reino Unido e Canadá, mantendo Estados Unidos, nas duas campanhas juntas. Só na Lunex 3.</li>
+      <li>Trocar as perguntas da presell com base em concorrentes, com perguntas diferentes entre Lunex 3 e Bolviro.</li>
+    </ul>
+
+    <h3>Apontamentos</h3>
+    <ul>
+      <li><strong>Não estão no bloco:</strong> mostrar a média diária de gasto por tipo de estrutura (e levar o mapeamento para R03 e R04) e verificar se a conta de empréstimo ainda está ativa. Gustavo liberou usá-la.</li>
+      <li>Na reunião, os novos responsivos também ficaram para a R03 (e a R04, segundo o Gemini), não só para as operações games/Roblox. Foi o que mais ajudou a destravar antes.</li>
+      <li>Lunex 3 e Bolviro seguem com leads instáveis; Lunex 2 fechou positivo, mas gastando pouco. Falta testar lá a expansão de grupos com segmentos personalizados.</li>
+      <li>Na planilha, a conta da Lunex 1 parece estar com o nome errado (aparece com outra nomenclatura e está rodando com outra pessoa). Vale conferir.</li>
+      <li>Retenção (fora do seu escopo): Gustavo vai testar reinserir a base de broadcast na ActiveCampaign e esticar a automação de 5 para 7–10 dias.</li>
+    </ul>
+  </aside>
+</div>
 
 <script>
   // ============================================================
   //  NOTAS — edite só esta parte.
   // ============================================================
-  const ATUALIZADO = "27/10/2026 às 16:40";
+  const ATUALIZADO = "27/10/2026 às 16:44";
 
   const NOTAS = [
     "Usar no mínimo R$ 500/dia em Total Finanças, Lunex 3 e todas as subs da Roblox",

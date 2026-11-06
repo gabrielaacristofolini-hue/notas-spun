@@ -77,6 +77,11 @@
   ol li { padding-left: 4px; margin-bottom: 6px; }
   ol li::marker { font-weight: 500; }
 
+  /* Metas: uma linha divisória entre cada operação. */
+  #metas li { margin: 0; padding: 10px 0 10px 4px; border-bottom: 1px solid rgba(42, 42, 42, .35); }
+  #metas li:first-child { padding-top: 0; }
+  #metas li:last-child { border-bottom: 0; padding-bottom: 0; }
+
   .vazio { color: var(--suave); margin: 0; }
 
   @media (max-width: 860px) {
@@ -116,7 +121,7 @@
   //  NOTAS e METAS: edite só esta parte.
   //  Escreva cada item como "Operação: tarefa".
   // ============================================================
-  const ATUALIZADO = "06/11/2026 às 16:01";
+  const ATUALIZADO = "06/11/2026 às 16:08";
 
   const NOTAS = [
     "JN US CC: subir novas campanhas com meta de compra",

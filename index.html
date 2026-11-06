@@ -33,11 +33,12 @@
   /* ---------- Cabeçalho ---------- */
   header { position: relative; }
   h1 {
-    font-size: clamp(64px, 12.5vw, 190px);
+    font-size: clamp(44px, 7vw, 104px);
     font-weight: 800;
-    line-height: .86;
-    letter-spacing: -.055em;
-    margin: 0 0 0 -.04em;
+    line-height: .9;
+    letter-spacing: -.05em;
+    margin: 0 0 0 -.03em;
+    white-space: nowrap;
   }
   .data {
     position: absolute;
@@ -75,18 +76,6 @@
   ol li::marker { font-weight: 500; }
   b { font-weight: 700; }
 
-  .meta { padding: 14px 0; border-top: 1px solid rgba(42, 42, 42, .35); }
-  .meta:first-of-type { border-top: 0; padding-top: 0; }
-  .meta b {
-    display: block;
-    font-size: 13px;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    color: var(--suave);
-    margin-bottom: 2px;
-  }
-  .meta span { font-size: 21px; font-weight: 700; letter-spacing: -.01em; }
-
   .vazio { color: var(--suave); margin: 0; }
 
   @media (max-width: 860px) {
@@ -104,7 +93,7 @@
 <div class="pagina">
   <header>
     <span class="data" id="data"></span>
-    <h1>Notas<br>Spun.</h1>
+    <h1>Notas Spun.</h1>
   </header>
   <p class="atualizado" id="atualizado"></p>
 
@@ -115,7 +104,7 @@
     </section>
     <aside class="celula">
       <p class="rotulo">Metas:</p>
-      <div id="metas"></div>
+      <ol id="metas"></ol>
     </aside>
   </div>
 </div>
@@ -125,7 +114,7 @@
   //  NOTAS e METAS — edite só esta parte.
   //  "Operação: tarefa" deixa o nome da operação em negrito.
   // ============================================================
-  const ATUALIZADO = "06/11/2026 às 15:55";
+  const ATUALIZADO = "06/11/2026 às 15:58";
 
   const NOTAS = [
     "JN US CC: subir novas campanhas com meta de compra",
@@ -146,32 +135,28 @@
   document.getElementById("data").textContent = `[ ${d}.${m}.${a.slice(2)} ]`;
   document.getElementById("atualizado").textContent = `- atualizado às ${hora} -`;
 
-  const lista = document.getElementById("notas");
-  if (!NOTAS.length) lista.outerHTML = '<p class="vazio">Nada anotado.</p>';
-  NOTAS.forEach(texto => {
+  // Tarefas e metas usam o mesmo formato: operação em negrito — texto.
+  function item(operacao, texto) {
     const li = document.createElement("li");
-    const p = texto.match(/^([^:]{1,30}):\s*(.+)$/);
-    if (p) {
+    if (operacao) {
       const b = document.createElement("b");
-      b.textContent = p[1];
-      li.append(b, " — " + p[2]);
+      b.textContent = operacao;
+      li.append(b, " — " + texto);
     } else {
       li.textContent = texto;
     }
-    lista.append(li);
+    return li;
+  }
+
+  const lista = document.getElementById("notas");
+  if (!NOTAS.length) lista.outerHTML = '<p class="vazio">Nada anotado.</p>';
+  NOTAS.forEach(texto => {
+    const p = texto.match(/^([^:]{1,30}):\s*(.+)$/);
+    lista.append(p ? item(p[1], p[2]) : item(null, texto));
   });
 
   const metas = document.getElementById("metas");
-  METAS.forEach(([operacao, meta]) => {
-    const div = document.createElement("div");
-    div.className = "meta";
-    const b = document.createElement("b");
-    b.textContent = operacao;
-    const span = document.createElement("span");
-    span.textContent = meta;
-    div.append(b, span);
-    metas.append(div);
-  });
+  METAS.forEach(([operacao, meta]) => metas.append(item(operacao, meta)));
 </script>
 </body>
 </html>

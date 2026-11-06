@@ -77,10 +77,12 @@
   ul li { padding-left: 4px; margin-bottom: 6px; }
   ul li::marker { color: var(--suave); }
 
-  /* Metas: uma linha divisória entre cada operação. */
-  #metas li { margin: 0; padding: 10px 0 10px 4px; border-bottom: 1px solid rgba(42, 42, 42, .35); }
-  #metas li:first-child { padding-top: 0; }
-  #metas li:last-child { border-bottom: 0; padding-bottom: 0; }
+  /* Metas: cada operação com subtítulo e linha divisória entre elas. */
+  .operacao { padding: 12px 0; border-bottom: 1px solid rgba(42, 42, 42, .35); }
+  .operacao:first-child { padding-top: 0; }
+  .operacao:last-child { border-bottom: 0; padding-bottom: 0; }
+  .operacao h3 { font-size: 15px; font-weight: 700; margin: 0 0 6px; }
+  .operacao li { margin: 0; }
 
   .vazio { color: var(--suave); margin: 0; }
 
@@ -111,7 +113,7 @@
     </section>
     <aside class="celula">
       <p class="rotulo">Metas:</p>
-      <ul id="metas"></ul>
+      <div id="metas"></div>
     </aside>
   </div>
 </div>
@@ -121,7 +123,7 @@
   //  NOTAS e METAS: edite só esta parte.
   //  Escreva cada item como "Operação: tarefa".
   // ============================================================
-  const ATUALIZADO = "06/11/2026 às 16:08";
+  const ATUALIZADO = "06/11/2026 às 16:11";
 
   const NOTAS = [
     "JN US CC: subir novas campanhas com meta de compra",
@@ -132,8 +134,8 @@
   // Metas: [operação, meta]
   const METAS = [
     ["JN US CC", "R$ 30 mil/dia com ROAS de −20%"],
-    ["Roblox", "escalar com ROAS de +20% a +30%"],
-    ["BG MX", "estabilizar a compra"],
+    ["Roblox", "Escalar com ROAS de +20% a +30%"],
+    ["BG MX", "Estabilizar a compra"],
   ];
   // ============================================================
 
@@ -142,22 +144,28 @@
   document.getElementById("data").textContent = `[ ${d}.${m}.${a.slice(2)} ]`;
   document.getElementById("atualizado").textContent = `atualizado às ${hora}`;
 
-  // Tarefas e metas usam o mesmo formato: "operação: texto".
-  function item(operacao, texto) {
+  function item(texto) {
     const li = document.createElement("li");
-    li.textContent = operacao ? `${operacao}: ${texto}` : texto;
+    li.textContent = texto;
     return li;
   }
 
   const lista = document.getElementById("notas");
   if (!NOTAS.length) lista.outerHTML = '<p class="vazio">Nada anotado.</p>';
-  NOTAS.forEach(texto => {
-    const p = texto.match(/^([^:]{1,30}):\s*(.+)$/);
-    lista.append(p ? item(p[1], p[2]) : item(null, texto));
-  });
+  NOTAS.forEach(texto => lista.append(item(texto)));
 
+  // Cada operação vira um bloco: subtítulo com o nome, depois a meta.
   const metas = document.getElementById("metas");
-  METAS.forEach(([operacao, meta]) => metas.append(item(operacao, meta)));
+  METAS.forEach(([operacao, meta]) => {
+    const bloco = document.createElement("div");
+    bloco.className = "operacao";
+    const titulo = document.createElement("h3");
+    titulo.textContent = operacao;
+    const ul = document.createElement("ul");
+    ul.append(item(meta));
+    bloco.append(titulo, ul);
+    metas.append(bloco);
+  });
 </script>
 </body>
 </html>

@@ -7,182 +7,127 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --mesa: #0b0b0b;
-    --papel: #ebddbb;
-    --grade: rgba(110, 75, 35, .17);
-    --tinta: #2b1d10;
-    --lapis: #6e5638;
-    --vermelho: #8e2f22;
-    --marca-amarela: rgba(240, 190, 30, .5);
-    --marca-verde: rgba(110, 170, 110, .45);
-    --marca-rosa: rgba(210, 110, 120, .4);
-    --marca-azul: rgba(100, 140, 190, .4);
-    --post-it: #eedb8c;
+    --fundo: #0c0c0d;
+    --painel: #151517;
+    --borda: #26262a;
+    --texto: #ededef;
+    --suave: #8b8b93;
+    --amarelo: #f5c542;
+    --verde: #4ad295;
+    --rosa: #f27a9b;
+    --azul: #5aa9ff;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
     min-height: 100vh;
-    background: var(--mesa);
-    color: var(--tinta);
-    font: 400 22px/1.55 Kalam, "Segoe Print", cursive;
-    padding: 24px 16px;
+    background: var(--fundo);
+    color: var(--texto);
+    font: 400 17px/1.5 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
-
-  .caderno {
-    position: relative;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 340px;
-    gap: 40px;
+  .pagina {
     max-width: 1240px;
-    min-height: calc(100vh - 48px);
     margin: 0 auto;
-    padding: 56px 56px 48px 72px;
-    background-color: var(--papel);
-    background-image:
-      radial-gradient(ellipse 120px 80px at 82% 78%, rgba(120, 75, 25, .07), transparent 70%),
-      radial-gradient(ellipse 160px 70px at 60% 8%, rgba(120, 75, 25, .05), transparent 70%),
-      radial-gradient(ellipse at center, transparent 65%, rgba(110, 65, 20, .14) 100%),
-      linear-gradient(var(--grade) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grade) 1px, transparent 1px);
-    background-size: auto, auto, auto, 26px 26px, 26px 26px;
-    border-radius: 3px 8px 8px 3px;
-    box-shadow:
-      inset 0 0 60px rgba(100, 60, 15, .18),
-      inset 0 0 8px rgba(80, 45, 10, .2),
-      inset 18px 0 24px -18px rgba(0, 0, 0, .2),
-      0 0 40px rgba(0, 0, 0, .6);
-  }
-  /* furos da espiral */
-  .caderno::before {
-    content: "";
-    position: absolute;
-    left: 22px; top: 28px; bottom: 28px;
-    width: 14px;
-    background: radial-gradient(circle, var(--mesa) 5px, rgba(0, 0, 0, .18) 6px, transparent 7px) 0 0 / 14px 34px;
-    background-repeat: no-repeat space;
+    padding: 40px 24px 56px;
   }
 
-  h1 {
-    font-family: Caveat, cursive;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1;
-    margin: 0 0 28px;
+  header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
   }
-  h1 span {
-    background: linear-gradient(100deg, transparent 2%, var(--marca-amarela) 4%, var(--marca-amarela) 96%, transparent 98%) 0 62% / 100% 52% no-repeat;
-    padding: 0 6px;
-  }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -.02em; margin: 0; }
+  .atualizado { color: var(--suave); font-size: 14px; }
 
-  .post-it {
-    position: absolute;
-    top: 30px; right: 36px;
-    width: 170px;
-    padding: 14px 14px 18px;
-    background: var(--post-it);
-    color: var(--lapis);
-    font-family: Caveat, cursive;
-    font-size: 21px;
-    line-height: 1.15;
-    text-align: center;
-    transform: rotate(3deg);
-    box-shadow: 0 6px 12px rgba(60, 40, 10, .18);
+  .grade {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 24px;
+    align-items: start;
   }
-  .post-it::before {
-    content: "";
-    position: absolute;
-    top: -10px; left: 50%;
-    width: 70px; height: 20px;
-    margin-left: -35px;
-    background: rgba(255, 255, 255, .55);
-    transform: rotate(-4deg);
+  .painel {
+    background: var(--painel);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 8px 24px;
+  }
+  .painel h2 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--suave);
+    margin: 16px 0 4px;
   }
 
   ul { list-style: none; margin: 0; padding: 0; }
-  li {
-    position: relative;
-    padding: 6px 0 6px 38px;
-    margin-bottom: 8px;
+  li, .meta {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--borda);
   }
-  li::before {
-    content: "→";
-    position: absolute;
-    left: 4px; top: 6px;
-    color: var(--vermelho);
-    font-weight: 700;
-  }
-  .marca {
-    font-weight: 700;
-    padding: 0 4px;
-    margin-left: -4px;
-    border-radius: 3px;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-  }
+  li:last-child, .meta:last-child { border-bottom: 0; }
 
-  .vazio { color: var(--lapis); font-style: italic; margin: 0; }
+  .tag {
+    flex: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    color: var(--cor);
+    background: color-mix(in srgb, var(--cor) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--cor) 30%, transparent);
+    white-space: nowrap;
+  }
+  .meta { flex-direction: column; gap: 6px; }
+  .meta strong { font-size: 18px; font-weight: 600; }
 
-  /* ---------- Metas ---------- */
-  .metas {
-    border-left: 2px dashed rgba(110, 75, 35, .35);
-    padding: 120px 0 0 32px;
-    font-size: 19px;
-    line-height: 1.4;
-  }
-  .metas h2 {
-    font-family: Caveat, cursive;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 1;
-    margin: 0 0 18px;
-    color: var(--vermelho);
-  }
-  .metas .meta { margin-bottom: 18px; }
-  .metas .marca { display: inline-block; margin-bottom: 2px; }
+  .vazio { color: var(--suave); padding: 16px 0; margin: 0; }
 
   @media (max-width: 900px) {
-    .caderno { grid-template-columns: 1fr; gap: 0; }
-    .metas {
-      border-left: 0;
-      border-top: 2px dashed rgba(110, 75, 35, .35);
-      margin-top: 28px;
-      padding: 24px 0 0;
-    }
+    .grade { grid-template-columns: 1fr; }
   }
-
-  @media (max-width: 640px) {
-    body { padding: 10px; font-size: 19px; }
-    .caderno { padding: 120px 20px 32px 44px; min-height: calc(100vh - 20px); }
-    .caderno::before { left: 12px; }
-    h1 { font-size: 44px; }
-    .post-it { top: 24px; right: 18px; width: 140px; font-size: 18px; }
-    li { padding-left: 30px; }
+  @media (max-width: 600px) {
+    .pagina { padding: 24px 16px 40px; }
+    li { flex-direction: column; gap: 6px; }
   }
 </style>
 </head>
 <body>
-<main class="caderno">
-  <div class="post-it" id="atualizado"></div>
-  <section>
-    <h1><span>Notas Spun</span></h1>
-    <ul id="notas"></ul>
-  </section>
-  <aside class="metas">
-    <h2>Metas</h2>
-    <div id="metas"></div>
-  </aside>
-</main>
+<div class="pagina">
+  <header>
+    <h1>Notas Spun</h1>
+    <span class="atualizado" id="atualizado"></span>
+  </header>
+
+  <div class="grade">
+    <section class="painel">
+      <h2>Tarefas</h2>
+      <ul id="notas"></ul>
+    </section>
+    <aside class="painel">
+      <h2>Metas</h2>
+      <div id="metas"></div>
+    </aside>
+  </div>
+</div>
 
 <script>
   // ============================================================
   //  NOTAS e METAS — edite só esta parte.
-  //  "Operação: tarefa" deixa a operação marcada com marca-texto.
+  //  "Operação: tarefa" mostra a operação como etiqueta colorida.
   // ============================================================
-  const ATUALIZADO = "06/11/2026 às 15:48";
+  const ATUALIZADO = "06/11/2026 às 15:49";
 
   const NOTAS = [
     "JN US CC: subir novas campanhas com meta de compra",
@@ -193,22 +138,21 @@
   // Metas: [operação, meta]
   const METAS = [
     ["JN US CC", "R$ 30 mil/dia com ROAS de −20%"],
-    ["Roblox", "escalar com ROAS de +20% a 30%"],
-    ["BG MX", "estabilizar a compra"],
+    ["Roblox", "Escalar com ROAS de +20% a +30%"],
+    ["BG MX", "Estabilizar a compra"],
   ];
   // ============================================================
 
-  const [dia, hora] = ATUALIZADO.split(" às ");
-  document.getElementById("atualizado").textContent = `atualizado em ${dia}, ${hora}`;
+  document.getElementById("atualizado").textContent = "Atualizado em " + ATUALIZADO;
 
-  // Cada operação ganha sempre a mesma cor de marca-texto.
-  const cores = ["--marca-amarela", "--marca-verde", "--marca-rosa", "--marca-azul"];
+  // Cada operação ganha sempre a mesma cor.
+  const cores = ["--amarelo", "--verde", "--rosa", "--azul"];
   const corDe = {};
-  function marca(operacao) {
+  function tag(operacao) {
     if (!(operacao in corDe)) corDe[operacao] = cores[Object.keys(corDe).length % cores.length];
     const span = document.createElement("span");
-    span.className = "marca";
-    span.style.background = `var(${corDe[operacao]})`;
+    span.className = "tag";
+    span.style.setProperty("--cor", `var(${corDe[operacao]})`);
     span.textContent = operacao;
     return span;
   }
@@ -218,8 +162,14 @@
   NOTAS.forEach(texto => {
     const li = document.createElement("li");
     const m = texto.match(/^([^:]{1,30}):\s*(.+)$/);
-    if (m) li.append(marca(m[1]), ": " + m[2]);
-    else li.textContent = texto;
+    const frase = document.createElement("span");
+    if (m) {
+      frase.textContent = m[2].charAt(0).toUpperCase() + m[2].slice(1);
+      li.append(tag(m[1]), frase);
+    } else {
+      frase.textContent = texto;
+      li.append(frase);
+    }
     lista.append(li);
   });
 
@@ -227,7 +177,9 @@
   METAS.forEach(([operacao, meta]) => {
     const div = document.createElement("div");
     div.className = "meta";
-    div.append(marca(operacao), document.createElement("br"), meta);
+    const forte = document.createElement("strong");
+    forte.textContent = meta;
+    div.append(tag(operacao), forte);
     metas.append(div);
   });
 </script>

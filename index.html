@@ -7,116 +7,114 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --fundo: #0c0c0d;
-    --painel: #151517;
-    --borda: #26262a;
-    --texto: #ededef;
-    --suave: #8b8b93;
-    --amarelo: #f5c542;
-    --verde: #4ad295;
-    --rosa: #f27a9b;
-    --azul: #5aa9ff;
+    --papel: #e4e2dd;
+    --tinta: #2a2a2a;
+    --suave: #6f6c66;
+    --linha: 2px solid var(--tinta);
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
     min-height: 100vh;
-    background: var(--fundo);
-    color: var(--texto);
-    font: 400 17px/1.5 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--papel);
+    color: var(--tinta);
+    font: 500 18px/1.45 "Inter Tight", "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   .pagina {
     max-width: 1240px;
     margin: 0 auto;
-    padding: 40px 24px 56px;
+    padding: 48px 24px 56px;
   }
 
-  header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
+  /* ---------- Cabeçalho ---------- */
+  header { position: relative; }
+  h1 {
+    font-size: clamp(64px, 12.5vw, 190px);
+    font-weight: 800;
+    line-height: .86;
+    letter-spacing: -.055em;
+    margin: 0 0 0 -.04em;
   }
-  h1 { font-size: 28px; font-weight: 700; letter-spacing: -.02em; margin: 0; }
-  .atualizado { color: var(--suave); font-size: 14px; }
+  .data {
+    position: absolute;
+    top: 6px; right: 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+  }
+  .atualizado {
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+    margin: 18px 0 22px;
+  }
 
-  .grade {
+  /* ---------- Quadro ---------- */
+  .quadro {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 400px;
-    gap: 24px;
-    align-items: start;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    border: var(--linha);
   }
-  .painel {
-    background: var(--painel);
-    border: 1px solid var(--borda);
-    border-radius: 14px;
-    padding: 8px 24px;
+  .celula { padding: 22px 26px 26px; }
+  .celula + .celula { border-left: var(--linha); }
+  .rotulo {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 16px;
   }
-  .painel h2 {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .08em;
+
+  ol {
+    margin: 0;
+    padding-left: 26px;
+  }
+  ol li { padding-left: 4px; margin-bottom: 6px; }
+  ol li::marker { font-weight: 500; }
+  b { font-weight: 700; }
+
+  .meta { padding: 14px 0; border-top: 1px solid rgba(42, 42, 42, .35); }
+  .meta:first-of-type { border-top: 0; padding-top: 0; }
+  .meta b {
+    display: block;
+    font-size: 13px;
+    letter-spacing: .06em;
     text-transform: uppercase;
     color: var(--suave);
-    margin: 16px 0 4px;
+    margin-bottom: 2px;
   }
+  .meta span { font-size: 21px; font-weight: 700; letter-spacing: -.01em; }
 
-  ul { list-style: none; margin: 0; padding: 0; }
-  li, .meta {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--borda);
-  }
-  li:last-child, .meta:last-child { border-bottom: 0; }
+  .vazio { color: var(--suave); margin: 0; }
 
-  .tag {
-    flex: none;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .02em;
-    padding: 3px 9px;
-    border-radius: 999px;
-    color: var(--cor);
-    background: color-mix(in srgb, var(--cor) 14%, transparent);
-    border: 1px solid color-mix(in srgb, var(--cor) 30%, transparent);
-    white-space: nowrap;
-  }
-  .meta { flex-direction: column; gap: 6px; }
-  .meta strong { font-size: 18px; font-weight: 600; }
-
-  .vazio { color: var(--suave); padding: 16px 0; margin: 0; }
-
-  @media (max-width: 900px) {
-    .grade { grid-template-columns: 1fr; }
+  @media (max-width: 860px) {
+    .quadro { grid-template-columns: 1fr; }
+    .celula + .celula { border-left: 0; border-top: var(--linha); }
   }
   @media (max-width: 600px) {
-    .pagina { padding: 24px 16px 40px; }
-    li { flex-direction: column; gap: 6px; }
+    .pagina { padding: 28px 16px 40px; }
+    .data { position: static; display: block; margin-bottom: 10px; font-size: 16px; }
+    body { font-size: 17px; }
   }
 </style>
 </head>
 <body>
 <div class="pagina">
   <header>
-    <h1>Notas Spun</h1>
-    <span class="atualizado" id="atualizado"></span>
+    <span class="data" id="data"></span>
+    <h1>Notas<br>Spun.</h1>
   </header>
+  <p class="atualizado" id="atualizado"></p>
 
-  <div class="grade">
-    <section class="painel">
-      <h2>Tarefas</h2>
-      <ul id="notas"></ul>
+  <div class="quadro">
+    <section class="celula">
+      <p class="rotulo">Tarefas:</p>
+      <ol id="notas"></ol>
     </section>
-    <aside class="painel">
-      <h2>Metas</h2>
+    <aside class="celula">
+      <p class="rotulo">Metas:</p>
       <div id="metas"></div>
     </aside>
   </div>
@@ -125,9 +123,9 @@
 <script>
   // ============================================================
   //  NOTAS e METAS — edite só esta parte.
-  //  "Operação: tarefa" mostra a operação como etiqueta colorida.
+  //  "Operação: tarefa" deixa o nome da operação em negrito.
   // ============================================================
-  const ATUALIZADO = "06/11/2026 às 15:49";
+  const ATUALIZADO = "06/11/2026 às 15:55";
 
   const NOTAS = [
     "JN US CC: subir novas campanhas com meta de compra",
@@ -143,32 +141,22 @@
   ];
   // ============================================================
 
-  document.getElementById("atualizado").textContent = "Atualizado em " + ATUALIZADO;
-
-  // Cada operação ganha sempre a mesma cor.
-  const cores = ["--amarelo", "--verde", "--rosa", "--azul"];
-  const corDe = {};
-  function tag(operacao) {
-    if (!(operacao in corDe)) corDe[operacao] = cores[Object.keys(corDe).length % cores.length];
-    const span = document.createElement("span");
-    span.className = "tag";
-    span.style.setProperty("--cor", `var(${corDe[operacao]})`);
-    span.textContent = operacao;
-    return span;
-  }
+  const [dia, hora] = ATUALIZADO.split(" às ");
+  const [d, m, a] = dia.split("/");
+  document.getElementById("data").textContent = `[ ${d}.${m}.${a.slice(2)} ]`;
+  document.getElementById("atualizado").textContent = `- atualizado às ${hora} -`;
 
   const lista = document.getElementById("notas");
   if (!NOTAS.length) lista.outerHTML = '<p class="vazio">Nada anotado.</p>';
   NOTAS.forEach(texto => {
     const li = document.createElement("li");
-    const m = texto.match(/^([^:]{1,30}):\s*(.+)$/);
-    const frase = document.createElement("span");
-    if (m) {
-      frase.textContent = m[2].charAt(0).toUpperCase() + m[2].slice(1);
-      li.append(tag(m[1]), frase);
+    const p = texto.match(/^([^:]{1,30}):\s*(.+)$/);
+    if (p) {
+      const b = document.createElement("b");
+      b.textContent = p[1];
+      li.append(b, " — " + p[2]);
     } else {
-      frase.textContent = texto;
-      li.append(frase);
+      li.textContent = texto;
     }
     lista.append(li);
   });
@@ -177,9 +165,11 @@
   METAS.forEach(([operacao, meta]) => {
     const div = document.createElement("div");
     div.className = "meta";
-    const forte = document.createElement("strong");
-    forte.textContent = meta;
-    div.append(tag(operacao), forte);
+    const b = document.createElement("b");
+    b.textContent = operacao;
+    const span = document.createElement("span");
+    span.textContent = meta;
+    div.append(b, span);
     metas.append(div);
   });
 </script>

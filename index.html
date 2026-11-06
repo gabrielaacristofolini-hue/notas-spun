@@ -10,24 +10,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --mesa: #d9cdb8;
-    --papel: #f7f1e3;
-    --grade: rgba(96, 120, 150, .16);
-    --tinta: #1f2a44;
-    --lapis: #6b6458;
-    --vermelho: #b8433a;
-    --marca-amarela: rgba(255, 214, 10, .55);
-    --marca-verde: rgba(120, 220, 170, .5);
-    --marca-rosa: rgba(255, 150, 190, .45);
-    --marca-azul: rgba(130, 190, 255, .45);
-    --post-it: #fff2a8;
+    --mesa: #3a2a1d;
+    --papel: #e6d3a8;
+    --grade: rgba(110, 75, 35, .17);
+    --tinta: #2b1d10;
+    --lapis: #6e5638;
+    --vermelho: #8e2f22;
+    --marca-amarela: rgba(240, 190, 30, .5);
+    --marca-verde: rgba(110, 170, 110, .45);
+    --marca-rosa: rgba(210, 110, 120, .4);
+    --marca-azul: rgba(100, 140, 190, .4);
+    --post-it: #eedb8c;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
     min-height: 100vh;
     background:
-      radial-gradient(ellipse at 20% 0%, rgba(255, 255, 255, .35), transparent 60%),
+      radial-gradient(ellipse at 30% 0%, rgba(255, 220, 160, .12), transparent 60%),
+      repeating-linear-gradient(92deg, rgba(0, 0, 0, .06) 0 2px, transparent 2px 9px, rgba(255, 255, 255, .03) 9px 11px, transparent 11px 23px),
       var(--mesa);
     color: var(--tinta);
     font: 400 22px/1.55 Kalam, "Segoe Print", cursive;
@@ -41,15 +42,20 @@
     padding: 56px 56px 48px 72px;
     background-color: var(--papel);
     background-image:
+      radial-gradient(ellipse 120px 80px at 82% 78%, rgba(120, 75, 25, .16), transparent 70%),
+      radial-gradient(ellipse 90px 60px at 12% 88%, rgba(120, 75, 25, .12), transparent 70%),
+      radial-gradient(ellipse 160px 70px at 60% 8%, rgba(120, 75, 25, .10), transparent 70%),
+      radial-gradient(ellipse at center, transparent 55%, rgba(110, 65, 20, .28) 100%),
       linear-gradient(var(--grade) 1px, transparent 1px),
       linear-gradient(90deg, var(--grade) 1px, transparent 1px);
-    background-size: 26px 26px;
+    background-size: auto, auto, auto, auto, 26px 26px, 26px 26px;
     border-radius: 3px 8px 8px 3px;
     box-shadow:
-      inset 0 0 90px rgba(150, 110, 50, .14),
-      inset 18px 0 24px -18px rgba(0, 0, 0, .18),
-      0 2px 4px rgba(60, 40, 10, .12),
-      0 18px 40px rgba(60, 40, 10, .22);
+      inset 0 0 70px rgba(100, 60, 15, .35),
+      inset 0 0 12px rgba(80, 45, 10, .35),
+      inset 18px 0 24px -18px rgba(0, 0, 0, .25),
+      0 2px 4px rgba(0, 0, 0, .3),
+      0 22px 50px rgba(0, 0, 0, .5);
     transform: rotate(-.4deg);
   }
   /* furos da espiral */
@@ -121,14 +127,6 @@
 
   .vazio { color: var(--lapis); font-style: italic; margin: 0; }
 
-  .rabisco {
-    display: block;
-    width: 120px;
-    margin: 36px 0 0 auto;
-    color: var(--lapis);
-    opacity: .7;
-  }
-
   @media (max-width: 640px) {
     body { padding: 20px 10px 40px; font-size: 19px; }
     .caderno { padding: 120px 20px 32px 44px; transform: none; }
@@ -144,10 +142,6 @@
   <div class="post-it" id="atualizado"></div>
   <h1><span>Notas Spun</span></h1>
   <ul id="notas"></ul>
-  <svg class="rabisco" viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
-    <path d="M4 26c14-12 22 8 34-4s18-10 28 2 20 6 30-6 14-6 20 2"/>
-    <path d="M100 8l4 6 7 1-5 5 1 7-7-3-6 3 1-7-5-5 7-1z"/>
-  </svg>
 </main>
 
 <script>
@@ -155,7 +149,7 @@
   //  NOTAS — edite só esta parte.
   //  "Operação: tarefa" deixa a operação marcada com marca-texto.
   // ============================================================
-  const ATUALIZADO = "06/11/2026 às 13:51";
+  const ATUALIZADO = "06/11/2026 às 13:55";
 
   const NOTAS = [
     "JN US CC: subir novas campanhas com meta de compra",

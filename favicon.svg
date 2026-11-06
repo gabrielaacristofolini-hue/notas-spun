@@ -3,5 +3,5 @@
     text { fill: #2a2a2a; }
     @media (prefers-color-scheme: dark) { text { fill: #e4e2dd; } }
   </style>
-  <text x="32" y="45" text-anchor="middle" font-family="'Inter Tight', 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="800" letter-spacing="-2">NS</text>
+  <text x="31" y="48" text-anchor="middle" font-family="'Inter Tight', 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="800" letter-spacing="-3">NS</text>
 </svg>

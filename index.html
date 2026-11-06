@@ -34,7 +34,10 @@
 
   .caderno {
     position: relative;
-    max-width: 980px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 40px;
+    max-width: 1240px;
     min-height: calc(100vh - 48px);
     margin: 0 auto;
     padding: 56px 56px 48px 72px;
@@ -123,6 +126,34 @@
 
   .vazio { color: var(--lapis); font-style: italic; margin: 0; }
 
+  /* ---------- Metas ---------- */
+  .metas {
+    border-left: 2px dashed rgba(110, 75, 35, .35);
+    padding: 120px 0 0 32px;
+    font-size: 19px;
+    line-height: 1.4;
+  }
+  .metas h2 {
+    font-family: Caveat, cursive;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+    margin: 0 0 18px;
+    color: var(--vermelho);
+  }
+  .metas .meta { margin-bottom: 18px; }
+  .metas .marca { display: inline-block; margin-bottom: 2px; }
+
+  @media (max-width: 900px) {
+    .caderno { grid-template-columns: 1fr; gap: 0; }
+    .metas {
+      border-left: 0;
+      border-top: 2px dashed rgba(110, 75, 35, .35);
+      margin-top: 28px;
+      padding: 24px 0 0;
+    }
+  }
+
   @media (max-width: 640px) {
     body { padding: 10px; font-size: 19px; }
     .caderno { padding: 120px 20px 32px 44px; min-height: calc(100vh - 20px); }
@@ -136,21 +167,34 @@
 <body>
 <main class="caderno">
   <div class="post-it" id="atualizado"></div>
-  <h1><span>Notas Spun</span></h1>
-  <ul id="notas"></ul>
+  <section>
+    <h1><span>Notas Spun</span></h1>
+    <ul id="notas"></ul>
+  </section>
+  <aside class="metas">
+    <h2>Metas</h2>
+    <div id="metas"></div>
+  </aside>
 </main>
 
 <script>
   // ============================================================
-  //  NOTAS — edite só esta parte.
+  //  NOTAS e METAS — edite só esta parte.
   //  "Operação: tarefa" deixa a operação marcada com marca-texto.
   // ============================================================
-  const ATUALIZADO = "06/11/2026 às 15:46";
+  const ATUALIZADO = "06/11/2026 às 15:48";
 
   const NOTAS = [
     "JN US CC: subir novas campanhas com meta de compra",
     "JN US CC: subir novas campanhas de geração de demanda",
     "Puxar a conta que paga por conversão da JN US EMP para a JN US CC",
+  ];
+
+  // Metas: [operação, meta]
+  const METAS = [
+    ["JN US CC", "R$ 30 mil/dia com ROAS de −20%"],
+    ["Roblox", "escalar com ROAS de +20% a +30%"],
+    ["BG MX", "estabilizar a compra"],
   ];
   // ============================================================
 
@@ -160,22 +204,31 @@
   // Cada operação ganha sempre a mesma cor de marca-texto.
   const cores = ["--marca-amarela", "--marca-verde", "--marca-rosa", "--marca-azul"];
   const corDe = {};
+  function marca(operacao) {
+    if (!(operacao in corDe)) corDe[operacao] = cores[Object.keys(corDe).length % cores.length];
+    const span = document.createElement("span");
+    span.className = "marca";
+    span.style.background = `var(${corDe[operacao]})`;
+    span.textContent = operacao;
+    return span;
+  }
+
   const lista = document.getElementById("notas");
   if (!NOTAS.length) lista.outerHTML = '<p class="vazio">Nada anotado.</p>';
   NOTAS.forEach(texto => {
     const li = document.createElement("li");
     const m = texto.match(/^([^:]{1,30}):\s*(.+)$/);
-    if (m) {
-      if (!(m[1] in corDe)) corDe[m[1]] = cores[Object.keys(corDe).length % cores.length];
-      const marca = document.createElement("span");
-      marca.className = "marca";
-      marca.style.background = `var(${corDe[m[1]]})`;
-      marca.textContent = m[1];
-      li.append(marca, ": " + m[2]);
-    } else {
-      li.textContent = texto;
-    }
+    if (m) li.append(marca(m[1]), ": " + m[2]);
+    else li.textContent = texto;
     lista.append(li);
+  });
+
+  const metas = document.getElementById("metas");
+  METAS.forEach(([operacao, meta]) => {
+    const div = document.createElement("div");
+    div.className = "meta";
+    div.append(marca(operacao), document.createElement("br"), meta);
+    metas.append(div);
   });
 </script>
 </body>

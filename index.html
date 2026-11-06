@@ -60,10 +60,10 @@
   .quadro {
     display: grid;
     grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
-    border: var(--linha);
+    gap: 24px;
+    align-items: start;
   }
-  .celula { padding: 22px 26px 26px; }
-  .celula + .celula { border-left: var(--linha); }
+  .celula { padding: 22px 26px 26px; border: var(--linha); }
   .rotulo {
     font-size: 15px;
     font-weight: 700;
@@ -80,8 +80,7 @@
   .vazio { color: var(--suave); margin: 0; }
 
   @media (max-width: 860px) {
-    .quadro { grid-template-columns: 1fr; }
-    .celula + .celula { border-left: 0; border-top: var(--linha); }
+    .quadro { grid-template-columns: 1fr; gap: 16px; }
   }
   @media (max-width: 600px) {
     .pagina { padding: 28px 16px 40px; }

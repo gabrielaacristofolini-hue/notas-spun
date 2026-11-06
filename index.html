@@ -76,7 +76,6 @@
   }
   ol li { padding-left: 4px; margin-bottom: 6px; }
   ol li::marker { font-weight: 500; }
-  b { font-weight: 700; }
 
   .vazio { color: var(--suave); margin: 0; }
 
@@ -116,7 +115,7 @@
 <script>
   // ============================================================
   //  NOTAS e METAS: edite só esta parte.
-  //  "Operação: tarefa" deixa o nome da operação em negrito.
+  //  Escreva cada item como "Operação: tarefa".
   // ============================================================
   const ATUALIZADO = "06/11/2026 às 16:01";
 
@@ -139,16 +138,10 @@
   document.getElementById("data").textContent = `[ ${d}.${m}.${a.slice(2)} ]`;
   document.getElementById("atualizado").textContent = `atualizado às ${hora}`;
 
-  // Tarefas e metas usam o mesmo formato: "operação em negrito: texto".
+  // Tarefas e metas usam o mesmo formato: "operação: texto".
   function item(operacao, texto) {
     const li = document.createElement("li");
-    if (operacao) {
-      const b = document.createElement("b");
-      b.textContent = operacao + ":";
-      li.append(b, " " + texto);
-    } else {
-      li.textContent = texto;
-    }
+    li.textContent = operacao ? `${operacao}: ${texto}` : texto;
     return li;
   }
 

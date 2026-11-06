@@ -31,27 +31,29 @@
   }
 
   /* ---------- Cabeçalho ---------- */
-  header { position: relative; }
+  header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 24px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
   h1 {
-    font-size: clamp(44px, 7vw, 104px);
+    font-size: clamp(36px, 4.6vw, 64px);
     font-weight: 800;
-    line-height: .9;
-    letter-spacing: -.05em;
+    line-height: 1;
+    letter-spacing: -.045em;
     margin: 0 0 0 -.03em;
     white-space: nowrap;
   }
-  .data {
-    position: absolute;
-    top: 6px; right: 0;
-    font-size: 20px;
+  .carimbo {
+    display: flex;
+    gap: 14px;
+    font-size: 17px;
     font-weight: 700;
     letter-spacing: -.01em;
-  }
-  .atualizado {
-    text-align: center;
-    font-weight: 700;
-    font-size: 17px;
-    margin: 18px 0 22px;
+    white-space: nowrap;
   }
 
   /* ---------- Quadro ---------- */
@@ -84,7 +86,7 @@
   }
   @media (max-width: 600px) {
     .pagina { padding: 28px 16px 40px; }
-    .data { position: static; display: block; margin-bottom: 10px; font-size: 16px; }
+    .carimbo { font-size: 15px; }
     body { font-size: 17px; }
   }
 </style>
@@ -92,10 +94,12 @@
 <body>
 <div class="pagina">
   <header>
-    <span class="data" id="data"></span>
     <h1>Notas Spun.</h1>
+    <div class="carimbo">
+      <span id="atualizado"></span>
+      <span id="data"></span>
+    </div>
   </header>
-  <p class="atualizado" id="atualizado"></p>
 
   <div class="quadro">
     <section class="celula">
@@ -111,10 +115,10 @@
 
 <script>
   // ============================================================
-  //  NOTAS e METAS — edite só esta parte.
+  //  NOTAS e METAS: edite só esta parte.
   //  "Operação: tarefa" deixa o nome da operação em negrito.
   // ============================================================
-  const ATUALIZADO = "06/11/2026 às 15:58";
+  const ATUALIZADO = "06/11/2026 às 16:01";
 
   const NOTAS = [
     "JN US CC: subir novas campanhas com meta de compra",
@@ -133,15 +137,15 @@
   const [dia, hora] = ATUALIZADO.split(" às ");
   const [d, m, a] = dia.split("/");
   document.getElementById("data").textContent = `[ ${d}.${m}.${a.slice(2)} ]`;
-  document.getElementById("atualizado").textContent = `- atualizado às ${hora} -`;
+  document.getElementById("atualizado").textContent = `atualizado às ${hora}`;
 
-  // Tarefas e metas usam o mesmo formato: operação em negrito — texto.
+  // Tarefas e metas usam o mesmo formato: "operação em negrito: texto".
   function item(operacao, texto) {
     const li = document.createElement("li");
     if (operacao) {
       const b = document.createElement("b");
-      b.textContent = operacao;
-      li.append(b, " — " + texto);
+      b.textContent = operacao + ":";
+      li.append(b, " " + texto);
     } else {
       li.textContent = texto;
     }

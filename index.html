@@ -76,6 +76,8 @@
   }
   ul li { padding-left: 4px; margin-bottom: 6px; }
   ul li::marker { color: var(--suave); }
+  ul.etapas { margin-top: 6px; padding-left: 22px; list-style: circle; }
+  ul.etapas li { margin-bottom: 4px; }
 
   /* Metas: cada operação com subtítulo e linha divisória entre elas. */
   .operacao { padding: 12px 0; border-bottom: 1px solid rgba(42, 42, 42, .35); }
@@ -122,16 +124,19 @@
   // ============================================================
   //  NOTAS e METAS: edite só esta parte.
   //  Escreva cada item como "Operação: tarefa".
+  //  Item com várias etapas: ["Título", ["etapa 1", "etapa 2"]].
   // ============================================================
-  const ATUALIZADO = "10/11/2026 às 11:09";
+  const ATUALIZADO = "10/11/2026 às 11:12";
 
   const NOTAS = [
     "JN US CC: subir novas campanhas com meta de compra",
     "JN US CC: subir novas campanhas de geração de demanda",
-    "JN US CC R03: remover todos os criativos e grupos ativos",
-    "JN US CC R03: novos grupos e criativos (por conversão e Max Conv)",
-    "JN US CC R03: subir novas campanhas de geração de demanda",
-    "JN US CC R03: remover todas as exclusões de URL",
+    ["JN US CC R03: refazer a estrutura", [
+      "Remover todos os criativos e grupos ativos",
+      "Inserir novos grupos e criativos nas campanhas por conversão e Max Conv",
+      "Subir novas campanhas de geração de demanda",
+      "Remover todas as exclusões de URL",
+    ]],
     "Puxar a conta que paga por conversão da JN US EMP para a JN US CC",
     "JN US: otimizar canais de compra",
     "Operações BG: otimização geral",
@@ -160,7 +165,16 @@
 
   const lista = document.getElementById("notas");
   if (!NOTAS.length) lista.outerHTML = '<p class="vazio">Nada anotado.</p>';
-  NOTAS.forEach(texto => lista.append(item(texto)));
+  NOTAS.forEach(nota => {
+    if (typeof nota === "string") return lista.append(item(nota));
+    const [titulo, etapas] = nota;
+    const li = item(titulo);
+    const sub = document.createElement("ul");
+    sub.className = "etapas";
+    etapas.forEach(etapa => sub.append(item(etapa)));
+    li.append(sub);
+    lista.append(li);
+  });
 
   // Cada operação vira um bloco: subtítulo com o nome, depois a meta.
   const metas = document.getElementById("metas");

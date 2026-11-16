@@ -13,7 +13,9 @@
     --papel: #e4e2dd;
     --tinta: #2a2a2a;
     --suave: #6f6c66;
+    --fio: 1px solid rgba(42, 42, 42, .3);
     --linha: 2px solid var(--tinta);
+    --colunas: 56px minmax(0, 1fr) minmax(0, 1.25fr);
   }
   * { box-sizing: border-box; }
   body {
@@ -37,7 +39,7 @@
     justify-content: space-between;
     gap: 8px 24px;
     flex-wrap: wrap;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
   h1 {
     font-size: clamp(36px, 4.6vw, 64px);
@@ -56,45 +58,74 @@
     white-space: nowrap;
   }
 
-  /* ---------- Quadro ---------- */
-  .quadro {
+  /* ---------- Quadro: uma faixa por operação ---------- */
+  .quadro { border-top: var(--linha); border-bottom: var(--linha); }
+  .colunas, .operacao {
     display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-    gap: 24px;
-    align-items: stretch;
+    grid-template-columns: var(--colunas);
+    column-gap: 24px;
   }
-  .celula { padding: 22px 26px 26px; border: var(--linha); }
-  .rotulo {
-    font-size: 15px;
+  .colunas {
+    padding: 10px 0;
+    border-bottom: var(--fio);
+    font-size: 13px;
     font-weight: 700;
-    margin: 0 0 16px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--suave);
   }
+  .colunas span:first-child { grid-column: 2; }
 
-  ul {
+  .operacao { padding: 22px 0 26px; border-bottom: var(--fio); row-gap: 10px; }
+  .operacao:last-child { border-bottom: 0; }
+  .numero {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: var(--suave);
+    font-variant-numeric: tabular-nums;
+    align-self: center;
+  }
+  .operacao h2 {
+    grid-column: 2 / -1;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -.025em;
     margin: 0;
-    padding-left: 26px;
   }
+  .metas { grid-column: 2; }
+  .tarefas { grid-column: 3; }
+
+  ul { margin: 0; padding-left: 22px; }
   ul li { padding-left: 4px; margin-bottom: 6px; }
+  ul li:last-child { margin-bottom: 0; }
   ul li::marker { color: var(--suave); }
-  ul.etapas { margin-top: 6px; padding-left: 22px; list-style: circle; }
+  ul.etapas { margin-top: 6px; list-style: circle; }
   ul.etapas li { margin-bottom: 4px; }
-
-  /* Metas: cada operação com subtítulo e linha divisória entre elas. */
-  .operacao { padding: 12px 0; border-bottom: 1px solid rgba(42, 42, 42, .35); }
-  .operacao:first-child { padding-top: 0; }
-  .operacao:last-child { border-bottom: 0; padding-bottom: 0; }
-  .operacao h3 { font-size: 15px; font-weight: 700; margin: 0 0 6px; }
-  .operacao li { margin: 0; }
-
   .vazio { color: var(--suave); margin: 0; }
 
   @media (max-width: 860px) {
-    .quadro { grid-template-columns: 1fr; gap: 16px; }
+    .colunas { display: none; }
+    .operacao { grid-template-columns: 40px minmax(0, 1fr); }
+    .metas, .tarefas { grid-column: 2; }
+    .metas::before, .tarefas::before {
+      display: block;
+      margin: 6px 0 6px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--suave);
+    }
+    .metas::before { content: "Metas"; }
+    .tarefas::before { content: "Tarefas"; }
   }
   @media (max-width: 600px) {
     .pagina { padding: 28px 16px 40px; }
     .carimbo { font-size: 15px; }
     body { font-size: 17px; }
+    .operacao h2 { font-size: 21px; }
   }
 </style>
 </head>
@@ -108,42 +139,59 @@
     </div>
   </header>
 
-  <div class="quadro">
-    <section class="celula">
-      <p class="rotulo">Tarefas:</p>
-      <ul id="notas"></ul>
-    </section>
-    <aside class="celula">
-      <p class="rotulo">Metas:</p>
-      <div id="metas"></div>
-    </aside>
-  </div>
+  <main class="quadro" id="quadro">
+    <div class="colunas"><span>Metas</span><span>Tarefas</span></div>
+  </main>
 </div>
 
 <script>
   // ============================================================
-  //  NOTAS e METAS: edite só esta parte.
-  //  Escreva cada item como "Operação: tarefa".
-  //  Item com várias etapas: ["Título", ["etapa 1", "etapa 2"]].
+  //  OPERAÇÕES: edite só esta parte.
+  //  Cada operação tem suas metas e suas tarefas.
+  //  Item com detalhes: ["Título", ["linha 1", "linha 2"]].
   // ============================================================
-  const ATUALIZADO = "13/11/2026 às 11:34";
+  const ATUALIZADO = "16/11/2026 às 08:35";
 
-  const NOTAS = [
-    "JN US CC: subir novas campanhas com meta de compra",
-    "JN US CC: inserir novos anúncios responsivos em todas as subs",
-    "JN US CC R03: plano para destravar as campanhas por conversão",
-    "Puxar a conta que paga por conversão da JN US EMP para a JN US CC",
-    "Shein: criar novos criativos",
-    "BGs e Shein: acompanhar canais de compra e otimização geral",
-  ];
-
-  // Metas: [operação, meta]
-  const METAS = [
-    ["JN US CC", "R$ 20 mil/dia com ROAS de −20%"],
-    ["Roblox", "Estabilizar a compra abaixo de R$ 2,30, com ROAS"],
-    ["BG MX", "Estabilizar a compra buscando ROAS"],
-    ["BG BR", "Estabilizar a compra buscando ROAS"],
-    ["Shein", "Estabilizar a compra buscando ROAS"],
+  const OPERACOES = [
+    {
+      nome: "JN US CC",
+      metas: [
+        "R$ 20 mil/dia com ROAS de −20%",
+        ["R01: R$ 3 mil de gasto em geração de demanda", [
+          "Com ROAS, o quanto antes",
+        ]],
+      ],
+      tarefas: [
+        "Subir novas campanhas com meta de compra",
+        "Inserir novos anúncios responsivos em todas as subs (R01, R03 e R04)",
+        "R01: inserir novos grupos de anúncio nas campanhas por conversão",
+        "R03: plano para destravar as campanhas por conversão",
+        "Puxar a conta que paga por conversão da JN US EMP",
+      ],
+    },
+    {
+      nome: "Roblox",
+      metas: ["Estabilizar a compra abaixo de R$ 2,30, com ROAS"],
+      tarefas: [],
+    },
+    {
+      nome: "BG MX",
+      metas: ["Estabilizar a compra buscando ROAS"],
+      tarefas: ["Acompanhar canais de compra e otimização geral"],
+    },
+    {
+      nome: "BG BR",
+      metas: ["Estabilizar a compra buscando ROAS"],
+      tarefas: ["Acompanhar canais de compra e otimização geral"],
+    },
+    {
+      nome: "Shein",
+      metas: ["Estabilizar a compra buscando ROAS"],
+      tarefas: [
+        "Criar novos criativos",
+        "Acompanhar canais de compra e otimização geral",
+      ],
+    },
   ];
   // ============================================================
 
@@ -152,36 +200,45 @@
   document.getElementById("data").textContent = `[ ${d}.${m}.${a.slice(2)} ]`;
   document.getElementById("atualizado").textContent = `atualizado às ${hora}`;
 
-  function item(texto) {
-    const li = document.createElement("li");
-    li.textContent = texto;
-    return li;
+  function el(tag, classe, texto) {
+    const no = document.createElement(tag);
+    if (classe) no.className = classe;
+    if (texto) no.textContent = texto;
+    return no;
   }
 
-  const lista = document.getElementById("notas");
-  if (!NOTAS.length) lista.outerHTML = '<p class="vazio">Nada anotado.</p>';
-  NOTAS.forEach(nota => {
-    if (typeof nota === "string") return lista.append(item(nota));
-    const [titulo, etapas] = nota;
-    const li = item(titulo);
-    const sub = document.createElement("ul");
-    sub.className = "etapas";
-    etapas.forEach(etapa => sub.append(item(etapa)));
-    li.append(sub);
-    lista.append(li);
-  });
+  // Lista de itens; um item pode trazer linhas de detalhe embaixo.
+  function lista(itens, classe, vazio) {
+    const caixa = el("div", classe);
+    if (!itens.length) {
+      caixa.append(el("p", "vazio", vazio));
+      return caixa;
+    }
+    const ul = el("ul");
+    itens.forEach(item => {
+      const [titulo, detalhes] = typeof item === "string" ? [item, []] : item;
+      const li = el("li", "", titulo);
+      if (detalhes.length) {
+        const sub = el("ul", "etapas");
+        detalhes.forEach(linha => sub.append(el("li", "", linha)));
+        li.append(sub);
+      }
+      ul.append(li);
+    });
+    caixa.append(ul);
+    return caixa;
+  }
 
-  // Cada operação vira um bloco: subtítulo com o nome, depois a meta.
-  const metas = document.getElementById("metas");
-  METAS.forEach(([operacao, meta]) => {
-    const bloco = document.createElement("div");
-    bloco.className = "operacao";
-    const titulo = document.createElement("h3");
-    titulo.textContent = operacao;
-    const ul = document.createElement("ul");
-    ul.append(item(meta));
-    bloco.append(titulo, ul);
-    metas.append(bloco);
+  const quadro = document.getElementById("quadro");
+  OPERACOES.forEach((op, i) => {
+    const faixa = el("section", "operacao");
+    faixa.append(
+      el("span", "numero", String(i + 1).padStart(2, "0")),
+      el("h2", "", op.nome),
+      lista(op.metas, "metas", "Sem meta definida"),
+      lista(op.tarefas, "tarefas", "Sem tarefas abertas"),
+    );
+    quadro.append(faixa);
   });
 </script>
 </body>

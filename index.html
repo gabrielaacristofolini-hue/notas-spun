@@ -76,53 +76,9 @@
   //  Item com detalhes: ["Título", ["linha 1", "linha 2"]].
   //  As metas ficam guardadas aqui, mas não aparecem no layout atual.
   // ============================================================
-  const ATUALIZADO = "19/11/2026 às 14:11";
+  const ATUALIZADO = "19/11/2026 às 14:14";
 
   const OPERACOES = [
-    {
-      nome: "JN US CC",
-      metas: [
-        "R$ 20 mil/dia com ROAS de −20%",
-        ["R01: R$ 3 mil de gasto em geração de demanda", [
-          "Com ROAS, o quanto antes",
-        ]],
-      ],
-      tarefas: [
-        "Subir novas campanhas com meta de compra",
-        "Inserir novos anúncios responsivos em todas as subs (R01, R03 e R04)",
-        ["Puxar campanhas antigas com bom desempenho e tentar destravar", [
-          "Em todas as subs, inclusive as que estão pausadas",
-        ]],
-        "R01: inserir novos grupos de anúncio nas campanhas por conversão",
-        ["R03: plano para destravar as campanhas por conversão", [
-          "Subir segmentadas aos nossos domínios por um tempo",
-        ]],
-        "Puxar a conta que paga por conversão da JN US EMP",
-      ],
-    },
-    {
-      nome: "Roblox",
-      metas: ["Estabilizar a compra abaixo de R$ 2,30, com ROAS"],
-      tarefas: [],
-    },
-    {
-      nome: "BG MX",
-      metas: ["Estabilizar a compra buscando ROAS"],
-      tarefas: ["Acompanhar canais de compra e otimização geral"],
-    },
-    {
-      nome: "BG BR",
-      metas: ["Estabilizar a compra buscando ROAS"],
-      tarefas: ["Acompanhar canais de compra e otimização geral"],
-    },
-    {
-      nome: "Shein",
-      metas: ["Estabilizar a compra buscando ROAS"],
-      tarefas: [
-        "Criar novos criativos",
-        "Acompanhar canais de compra e otimização geral",
-      ],
-    },
   ];
   // ============================================================
 
@@ -137,6 +93,7 @@
   }
 
   const quadro = document.getElementById("quadro");
+  if (!OPERACOES.length) quadro.append(el("p", "vazio", "Nada anotado ainda."));
   OPERACOES.forEach(op => {
     const secao = el("section");
     const ul = el("ul");

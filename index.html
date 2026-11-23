@@ -52,6 +52,14 @@
   ul.detalhes { padding-left: 30px; color: var(--detalhe); }
   .vazio { color: var(--suave); }
 
+  /* Notas recolhidas: só o título aparece, os detalhes abrem com um clique. */
+  li.recolhido::before { content: none; }
+  li.recolhido summary { cursor: pointer; list-style: none; }
+  li.recolhido summary::-webkit-details-marker { display: none; }
+  li.recolhido summary::before { content: "- "; }
+  li.recolhido summary::after { content: " (ver notas)"; color: var(--suave); font-size: 17px; }
+  li.recolhido details[open] summary::after { content: " (esconder)"; }
+
   @media (max-width: 600px) {
     .pagina { padding: 28px 16px 40px; }
     body { font-size: 18px; }
@@ -90,12 +98,19 @@
       const ul = el("ul");
       if (!op.tarefas.length) ul.append(el("li", "vazio", "Sem tarefas abertas"));
       op.tarefas.forEach(item => {
-        const [titulo, detalhes] = typeof item === "string" ? [item, []] : item;
-        const li = el("li", "", titulo);
-        if (detalhes.length) {
-          const sub = el("ul", "detalhes");
-          detalhes.forEach(linha => sub.append(el("li", "", linha)));
-          li.append(sub);
+        // Item: "texto" ou ["Título", [linhas]]; um terceiro valor "recolhido" esconde as linhas até o clique.
+        const [titulo, detalhes, modo] = typeof item === "string" ? [item, []] : item;
+        const sub = el("ul", "detalhes");
+        detalhes.forEach(linha => sub.append(el("li", "", linha)));
+        let li;
+        if (modo === "recolhido") {
+          li = el("li", "recolhido");
+          const caixa = el("details");
+          caixa.append(el("summary", "", titulo), sub);
+          li.append(caixa);
+        } else {
+          li = el("li", "", titulo);
+          if (detalhes.length) li.append(sub);
         }
         ul.append(li);
       });

@@ -37,7 +37,7 @@
           "Ela gastou um pouco melhor ontem",
           "Próximo passo: esticar verticalmente as campanhas que mantive",
           "Dentro do limite, para ter mais conversões"
-        ]],
+        ], "recolhido"],
         "Acompanhar o custo por conversão",
         "Entender o que na conta vai trazer um CTR maior neste primeiro momento"
       ]
@@ -60,7 +60,7 @@
           "Desativei esse recurso para a campanha não criar outros",
           "Alguns responsivos limitados por design enganoso, por 1 ou 2 imagens",
           "Ainda vou remover essas imagens"
-        ]],
+        ], "recolhido"],
         ["Direcionamento da operação", [
           "Gastar mais e converter mais"
         ]],
@@ -86,7 +86,7 @@
           "Custo/conv parecido: R$ 0,54 no estático e de R$ 0,37 a R$ 0,71 nos vídeos",
           "O estático está no grupo segmentado por palavras (vale de gas)",
           "Depois: comentar que a campanha não atribui o gasto às palavras específicas"
-        ]],
+        ], "recolhido"],
         ["Direcionamento da operação", [
           "Converter mais"
         ]],

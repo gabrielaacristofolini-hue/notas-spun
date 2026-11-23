@@ -1,0 +1,29 @@
+DAILIES E REUNIÕES (Notas Spun)
+Pontos de trabalho tirados das anotações e transcrições das reuniões. Assuntos pessoais ficam de fora.
+Uma linha por ponto, em ordem de tempo (o mais novo no fim). Horário de Brasília.
+Formato: dd/mm/aaaa HH:MM | REUNIÃO | OPERAÇÃO | TIPO | ponto
+Operações: JN US CC, JN US EMP, Roblox, Shein US, BG BR, BG MX, GERAL
+Tipos: RESUMO, DADO, OBSERVAÇÃO, PROBLEMA, EXPLICAÇÃO, DECISÃO, PRÓXIMO PASSO
+Nomes corrigidos da transcrição automática: "Shen" = Shein. Quando a transcrição parecer errada, fica anotado entre parênteses.
+
+23/11/2026 09:01 | Daily Aquisição [CC] | GERAL | RESUMO | Participantes: Gabriel Cristofolini e Gustavo Henriques. Foco em conversão e ajuste de tráfego. Fonte: anotações do Gemini (sem a transcrição completa)
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | R01 e R04 estáveis; R03 voltou a gastar em campanhas pagas por conversão para a Genial Crédito
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | Gustavo citou gasto reduzido de R$ 250 e o impacto dos criativos responsivos
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PRÓXIMO PASSO | Reativar os criativos responsivos e aplicar adequação de conteúdo depois de atingir um volume de gasto ideal
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | Geração de demanda implementada em estruturas novas na E01 (provável R01, transcrição), com ROAS baixo
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PRÓXIMO PASSO | Por causa do ROAS baixo, Gustavo vai consultar o Igor sobre a criação de novas páginas
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PROBLEMA | Receita divergente entre a planilha de controle e o Cronos, com valores diferentes por conta; na R01 a receita tinha discrepâncias
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | EXPLICAÇÃO | Hipótese do Gustavo: falha na marcação de conversões; sem marcação em campanhas pagas por conversão, a receita registrada e o gasto ficam distorcidos
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | R01 e R04 têm perfis de tráfego diferentes: CPM e canais variam (ex.: Vitale Brasil aparece na R01)
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | Para o Gustavo, a operação tem problemas que vão além do tráfego
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | A E04 (provável R04, transcrição) tinha ROAS um pouco maior quando a monetização estava otimizada
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PRÓXIMO PASSO | Gustavo vai conversar com o Igor para entender as rotas das páginas e alinhar as atualizações pendentes no Cronos
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DADO | De 20/11 até o dia da daily: custo/conv caiu 65% e taxa de conversão subiu 48%; CPM caiu bastante e impressões subiram; CTR segue baixo, média de 2%
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | PRÓXIMO PASSO | Escalar verticalmente a campanha de CPA desejado com melhor desempenho
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | PROBLEMA | Gustavo relatou problemas técnicos de exibição de idioma nas contas
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | OBSERVAÇÃO | Público concentrado em faixas acima de 65 anos e CPM médio baixo
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DECISÃO | Ativar a segmentação otimizada nas campanhas de geração de demanda e acompanhar o CPM e as métricas de conversão no mesmo dia
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DECISÃO | Se a segmentação otimizada não resolver, criar uma campanha de teste com meta de CPM e orçamento de R$ 250, para ver se o tráfego vai para a faixa esperada
+23/11/2026 09:01 | Daily Aquisição [CC] | BG BR | EXPLICAÇÃO | Taxa de conversão acima de 100%: vem de vários cliques por sessão; o código de rastreio avalia o ofuscamento do iframe e mudanças de visibilidade para registrar o clique
+23/11/2026 09:01 | Daily Aquisição [CC] | BG BR | EXPLICAÇÃO | Gustavo confirmou que a contagem pode registrar, sem distinção, o fechamento de pop-ups e a visualização de recompensas
+23/11/2026 09:01 | Daily Aquisição [CC] | BG BR | PRÓXIMO PASSO | Enviar ao Gustavo, pelo chat, os pontos observados nos benefícios do governo

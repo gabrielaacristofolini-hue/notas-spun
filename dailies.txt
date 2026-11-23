@@ -4,26 +4,50 @@ Uma linha por ponto, em ordem de tempo (o mais novo no fim). Horário de Brasíl
 Formato: dd/mm/aaaa HH:MM | REUNIÃO | OPERAÇÃO | TIPO | ponto
 Operações: JN US CC, JN US EMP, Roblox, Shein US, BG BR, BG MX, GERAL
 Tipos: RESUMO, DADO, OBSERVAÇÃO, PROBLEMA, EXPLICAÇÃO, DECISÃO, PRÓXIMO PASSO
-Nomes corrigidos da transcrição automática: "Shen" = Shein. Quando a transcrição parecer errada, fica anotado entre parênteses.
+Nomes corrigidos da transcrição automática: "Shen"/"chinha" = Shein; "E01"/"E03"/"E04" = R01/R03/R04; "Rose"/"ruas"/"Ross" = ROAS; "ed click" = adclick. Quando a transcrição parecer errada, fica anotado entre parênteses.
 
-23/11/2026 09:01 | Daily Aquisição [CC] | GERAL | RESUMO | Participantes: Gabriel Cristofolini e Gustavo Henriques. Foco em conversão e ajuste de tráfego. Fonte: anotações do Gemini (sem a transcrição completa)
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | R01 e R04 estáveis; R03 voltou a gastar em campanhas pagas por conversão para a Genial Crédito
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | Gustavo citou gasto reduzido de R$ 250 e o impacto dos criativos responsivos
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PRÓXIMO PASSO | Reativar os criativos responsivos e aplicar adequação de conteúdo depois de atingir um volume de gasto ideal
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | Geração de demanda implementada em estruturas novas na E01 (provável R01, transcrição), com ROAS baixo
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PRÓXIMO PASSO | Por causa do ROAS baixo, Gustavo vai consultar o Igor sobre a criação de novas páginas
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PROBLEMA | Receita divergente entre a planilha de controle e o Cronos, com valores diferentes por conta; na R01 a receita tinha discrepâncias
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | EXPLICAÇÃO | Hipótese do Gustavo: falha na marcação de conversões; sem marcação em campanhas pagas por conversão, a receita registrada e o gasto ficam distorcidos
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | R01 e R04 têm perfis de tráfego diferentes: CPM e canais variam (ex.: Vitale Brasil aparece na R01)
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | Para o Gustavo, a operação tem problemas que vão além do tráfego
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | A E04 (provável R04, transcrição) tinha ROAS um pouco maior quando a monetização estava otimizada
-23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PRÓXIMO PASSO | Gustavo vai conversar com o Igor para entender as rotas das páginas e alinhar as atualizações pendentes no Cronos
-23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DADO | De 20/11 até o dia da daily: custo/conv caiu 65% e taxa de conversão subiu 48%; CPM caiu bastante e impressões subiram; CTR segue baixo, média de 2%
-23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | PRÓXIMO PASSO | Escalar verticalmente a campanha de CPA desejado com melhor desempenho
-23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | PROBLEMA | Gustavo relatou problemas técnicos de exibição de idioma nas contas
-23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | OBSERVAÇÃO | Público concentrado em faixas acima de 65 anos e CPM médio baixo
-23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DECISÃO | Ativar a segmentação otimizada nas campanhas de geração de demanda e acompanhar o CPM e as métricas de conversão no mesmo dia
-23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DECISÃO | Se a segmentação otimizada não resolver, criar uma campanha de teste com meta de CPM e orçamento de R$ 250, para ver se o tráfego vai para a faixa esperada
-23/11/2026 09:01 | Daily Aquisição [CC] | BG BR | EXPLICAÇÃO | Taxa de conversão acima de 100%: vem de vários cliques por sessão; o código de rastreio avalia o ofuscamento do iframe e mudanças de visibilidade para registrar o clique
-23/11/2026 09:01 | Daily Aquisição [CC] | BG BR | EXPLICAÇÃO | Gustavo confirmou que a contagem pode registrar, sem distinção, o fechamento de pop-ups e a visualização de recompensas
+23/11/2026 09:01 | Daily Aquisição [CC] | GERAL | RESUMO | Participantes: Gabriel Cristofolini e Gustavo Henriques. Foco em conversão e ajuste de tráfego. Fonte: anotações do Gemini e transcrição completa (32 min)
+23/11/2026 09:01 | Daily Aquisição [CC] | GERAL | PROBLEMA | Gustavo: alguns GAMs param de imprimir anúncios e cessam todas as impressões; já impactou várias operações (não se sabe se ainda impacta) ("GAN" na transcrição)
+23/11/2026 09:01 | Daily Aquisição [CC] | GERAL | OBSERVAÇÃO | Gustavo: ROAS de -50% não é normal; -30% é o normal histórico
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | Busca de estabilidade na R01 e R04. R01 é quase toda paga por conversão, com uma estrutura de geração de demanda; R04 é 100% volátil
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | R03 voltou a gastar nas campanhas pagas por conversão, comprando nos nossos domínios (Genial Crédito e outros, nomes pouco claros na transcrição); 3 de 7 campanhas voltaram a gastar e todas estão imprimindo; gastou R$ 250 em 22/11
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PRÓXIMO PASSO | R03: esticar um pouco mais, porque tem algum ROAS; quando chegar a um volume de gasto ideal, aplicar tópico de finanças ou cartão de crédito e voltar com adequação de conteúdo e exclusões de canais
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | FEITO | R03: no fim de semana removi os criativos responsivos que estavam com flag; serão substituídos por novos
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | Nas outras subs o gasto vem principalmente de responsivos; a R03 destravou só com estáticos, então responsivos podem aumentar o pace
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | Toda campanha nova sobe como geração de demanda; o display são as campanhas que já rodavam na R01 e R04. R01 tem 5 campanhas de geração de demanda gastando mais de R$ 100 a R$ 150 por dia (cerca de 30% da estrutura), todas com ROAS muito ruim
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PRÓXIMO PASSO | Gustavo vai conversar com o Igor sobre as rotas e a nova página que ele ia fazer, porque o resultado estava muito ruim
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | R04 fechou 22/11 com 54% de ROAS real no Cronos
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PROBLEMA | Planilha parecia sem receita no dia; hipótese: o Igor mudou a página e ainda não atualizou a planilha
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | Gustavo criou no Cronos (Operações) a operação de cartão com as três contas. Em 22/11: planilha com receita de 3.800; visão de operações com custo de 8.000 e receita de 17.000; no dia da daily, 1.530 de receita
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | PROBLEMA | A visão de operações do Cronos parece puxar também a receita da retenção. Conta a conta os números batem; a receita real da R01 está errada (16.000), R03 e R04 parecem normais
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | EXPLICAÇÃO | Hipótese do Gustavo: falha na marcação de conversões (mais receita que gasto, isolado na R01). Outra hipótese: receita de uma página não cadastrada, que só aparece na planilha
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | Gustavo pede há duas semanas para casar a visão de operações com a de contas no Cronos
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | Diagnóstico do Cronos: 7 campanhas com ROAS abaixo de 80%; horários que não se pagam: 3h às 4h, 6h e 9h às 11h
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | DADO | Perfis bem diferentes: CPM médio da R01 em torno de 2.500 e da R04 de 700 a 750 (algumas campanhas 1.000); canais também diferentes (Vitale Brasil pesa na R01, a R04 tem canais diversos)
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | Os dois perfis estão ruins, então não dá para comparar um contra o outro; Gustavo: o problema não é só tráfego
+23/11/2026 09:01 | Daily Aquisição [CC] | JN US CC | OBSERVAÇÃO | Quando a monetização estava melhor, o perfil mais barato da R04 dava ROAS de 5% a 10% maior, mesmo gastando menos
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DADO | De 20/11 até o dia da daily: custo/conv caiu 65%, taxa de conversão subiu 48%, CPM caiu quase 60%, impressões subiram quase 400%; CTR segue baixo, média de 2%
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DADO | Custo/conv de 22/11: cerca de R$ 7 na média e R$ 8 nas campanhas ativadas, parecido com as contas das meninas; conversão de adclick, que já se espera mais cara
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | OBSERVAÇÃO | Gustavo: o CPA estimado ficou próximo, mas não rentabiliza
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | FEITO | Tirei vídeos com custo/conv alto e CTR baixo; os melhores vídeos estão em 4% a 5% de CTR, ainda baixo, provavelmente porque compramos só Shorts
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | FEITO | Como as contas das meninas rodam poucas campanhas ativas, tirei as piores campanhas e otimizei os criativos das melhores
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DADO | Campanha de CPA desejado: gastou R$ 125 de R$ 200 de orçamento em 22/11 (cerca de 70%), com custo/conv de R$ 6,26
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | PRÓXIMO PASSO | Esticar verticalmente a campanha de CPA desejado junto com as outras 3 boas, talvez depois manter 2; Gustavo: no ritmo atual vai demorar muito, então escalar vertical
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | PROBLEMA | Contas com idioma misturado (parte em português, parte em inglês) e contas em que não dá para mudar as colunas; nesses casos, ver pela MCC filtrando a conta
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DADO | Retenção dos vídeos: a maior parte assiste 25%. Anúncios combinam vídeos diferentes (ex.: vídeos 9 e 10, vídeos 5 e 6); olhar o gasto de cada um a nível de anúncio
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DADO | Meta de conversão: adclick em todas as campanhas. Gustavo: olhando adclick, a conversão não está ruim
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | OBSERVAÇÃO | As contas das meninas têm CTR mais alto (Gustavo citou 11%); para o Gustavo, CTR alto não depende só do vídeo, é preciso entender a motivação do clique. Faz sentido continuar testando vídeos diferentes
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DADO | Nosso CPM está muito baixo (público em R$ 50 a R$ 60; média em torno de R$ 200, misturando CPMs de 500 a 600 e de 60 a 90). O CPM das meninas é cerca de R$ 100 maior
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | OBSERVAÇÃO | Antes nosso CTR era maior (vídeos com 5% a 7%) com CPM um pouco maior. Gustavo: nossas conversões vêm do CPM mais elevado; com a média puxada para baixo, precisamos de muito mais impressão visível
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | OBSERVAÇÃO | As meninas não segmentam por canal nem por conteúdo (têm só algumas exclusões de canal) e metade do orçamento delas vai para zero conversão; usam segmentação otimizada e expansão ativadas
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DADO | Nosso público: público de interesses criado pelo Gustavo mais uma lista de palavras-chave para melhorar a pontuação de otimização; a segmentação otimizada não estava ativa; só smartphone
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | OBSERVAÇÃO | Público muito velho: concentrado em 65+ e indo até 45. O das meninas também é 65+; o público é parecido, mas pegamos uma parcela diferente. O público segmentado é melhor, mas não pega a maior parte da conversão
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | EXPLICAÇÃO | Público de canais semelhantes não vale a pena em Shorts: o volume de pessoas é enorme, o usuário está rolando e não lendo, e o algoritmo dilui a segmentação na parte de maior volume. Site tem intenção de busca, Shorts não; é outra jornada
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | EXPLICAÇÃO | Para forçar um CPM maior: aumentar o lance. CPC médio em torno de 4
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | OBSERVAÇÃO | Na semana anterior o CPM médio era bem maior, com outro público que provavelmente tinha a segmentação otimizada ligada; com o público de interesses o CPM caiu, mas convertemos muito mais
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DECISÃO | Primeiro: ativar a segmentação otimizada e acompanhar no mesmo dia o CPM e as métricas de conversão
+23/11/2026 09:01 | Daily Aquisição [CC] | Shein US | DECISÃO | Se não resolver: subir uma campanha de teste otimizada para meta de CPM, com R$ 250, para ver se ela leva o tráfego para a faixa de CPM esperada
+23/11/2026 09:01 | Daily Aquisição [CC] | BG BR | DADO | Canais com taxa de conversão acima de 20%, na média, já ficam acima de 100%
+23/11/2026 09:01 | Daily Aquisição [CC] | BG BR | EXPLICAÇÃO | Com adclick, a taxa de conversão pode passar de 100% quando há mais de um clique por sessão; para confirmar, comparar com o page view de clique
+23/11/2026 09:01 | Daily Aquisição [CC] | BG BR | EXPLICAÇÃO | Como o código conta o clique: avalia o ofuscamento do fundo e a mudança de visibilidade do iframe do anúncio. Pega clique no mob top, mas no reward e no interstitial não diferencia clique de fechamento (ex.: fechar um reward e clicar no mob top conta 2 cliques)
 23/11/2026 09:01 | Daily Aquisição [CC] | BG BR | PRÓXIMO PASSO | Enviar ao Gustavo, pelo chat, os pontos observados nos benefícios do governo

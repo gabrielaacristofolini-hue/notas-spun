@@ -70,3 +70,4 @@ Os registros de 19/11 e de 23/11 até 10:15 foram reconstruídos a partir das co
 23/11/2026 10:22 | BG MX | DECISÃO | Operação pausada por enquanto
 23/11/2026 10:26 | GERAL | DECISÃO | Criado o dailies.txt: pontos de trabalho das dailies e reuniões, separado do histórico
 23/11/2026 10:27 | Shein US | TAREFA NOVA | Depois do teste de segmentação otimizada, testar campanha com meta de CPM e orçamento de R$ 250, só se a segmentação não resolver (combinado na daily)
+23/11/2026 11:13 | JN US CC | COMUNICADO | Criada a página /aquisicao para explicar a aquisição (R01, R03, R04) à nova liderança, por causa da mudança de squad

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aquisição JN US CC</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+  @font-face {
+    font-family: "Excalifont";
+    src: url("https://excalidraw.nyc3.cdn.digitaloceanspaces.com/oss/fonts/Excalifont/Excalifont-Regular-a88b72a24fb54c9f94e3b5fdaa7481c9.woff2") format("woff2");
+    font-display: swap;
+  }
+  :root {
+    --fundo: #ffffff;
+    --tinta: #1e1e1e;
+    --detalhe: #555555;
+    --suave: #757575;
+    --azul: #e7f0ff;
+    --verde: #e6f6ea;
+    --amarelo: #fff4d6;
+    --rosa: #fde8e8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--tinta);
+    font: 20px/1.55 "Excalifont", "Segoe Print", "Comic Sans MS", cursive;
+  }
+  .pagina { padding: 48px 48px 72px; max-width: 1400px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 6px 24px; flex-wrap: wrap; margin-bottom: 8px; }
+  h1 { font-size: 32px; font-weight: 400; line-height: 1.25; margin: 0; }
+  header a, .suave { color: var(--suave); font-size: 17px; }
+  .intro { color: var(--detalhe); margin: 0 0 36px; }
+  section { margin-bottom: 44px; }
+  h2 { font-size: 26px; font-weight: 400; margin: 0 0 14px; }
+  h3 { font-size: 22px; font-weight: 400; margin: 0 0 6px; }
+  p { margin: 0 0 8px; }
+  ul { list-style: none; margin: 0; padding: 0 0 0 4px; }
+  li::before { content: "- "; }
+  li { margin-bottom: 2px; }
+
+  /* Caixas com traço de mão, como no Excalidraw. */
+  .caixa {
+    border: 2px solid var(--tinta);
+    border-radius: 14px 10px 16px 9px / 9px 15px 10px 14px;
+    padding: 14px 18px;
+    background: var(--fundo);
+  }
+
+  /* Fluxo de dinheiro */
+  .fluxo { display: flex; align-items: stretch; flex-wrap: wrap; gap: 10px; }
+  .etapa { flex: 1 1 180px; min-width: 180px; }
+  .etapa .num { color: var(--suave); font-size: 17px; }
+  .etapa h3 { margin-bottom: 4px; }
+  .etapa p { color: var(--detalhe); font-size: 18px; line-height: 1.4; margin: 0; }
+  .seta { align-self: center; font-size: 30px; padding: 0 2px; }
+  .etapa.azul { background: var(--azul); }
+  .etapa.verde { background: var(--verde); }
+  .etapa.amarelo { background: var(--amarelo); }
+  .chaves { display: flex; flex-wrap: wrap; gap: 10px 40px; margin-top: 14px; color: var(--detalhe); font-size: 18px; }
+
+  /* Grades */
+  .grade { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .conta h3 { font-size: 26px; margin-bottom: 2px; }
+  .conta .tipo { color: var(--suave); font-size: 17px; margin-bottom: 10px; }
+  .conta ul { font-size: 18px; color: var(--detalhe); }
+  .conta .rotulo { color: var(--tinta); margin: 10px 0 2px; }
+  .termo b { font-weight: 400; color: var(--tinta); }
+  .termo { font-size: 18px; color: var(--detalhe); }
+  .alerta { background: var(--rosa); }
+  .pendente { color: var(--suave); font-size: 17px; }
+
+  @media (max-width: 700px) {
+    .pagina { padding: 28px 16px 48px; }
+    body { font-size: 18px; }
+    h1 { font-size: 28px; }
+    .seta { transform: rotate(90deg); width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="pagina">
+  <header>
+    <h1>Aquisição JN US CC: como funciona e onde estamos</h1>
+    <a href="../">voltar para as tarefas</a>
+  </header>
+  <p class="intro">Resumo para a nova liderança. Operação de cartão de crédito nos EUA, com três contas de compra: R01, R03 e R04. Rascunho, em construção.</p>
+
+  <section>
+    <h2>1. Como a operação gera dinheiro</h2>
+    <div class="fluxo">
+      <div class="caixa etapa azul">
+        <div class="num">aquisição</div>
+        <h3>Anúncio</h3>
+        <p>Compramos mídia programática no Google Ads (display e geração de demanda) e exibimos nossos anúncios.</p>
+      </div>
+      <div class="seta">→</div>
+      <div class="caixa etapa azul">
+        <div class="num">aquisição</div>
+        <h3>Clique</h3>
+        <p>A pessoa clica no anúncio e chega na nossa página.</p>
+      </div>
+      <div class="seta">→</div>
+      <div class="caixa etapa azul">
+        <div class="num">aquisição</div>
+        <h3>Lead</h3>
+        <p>Ela cadastra o e-mail. Esse cadastro é o lead.</p>
+      </div>
+      <div class="seta">→</div>
+      <div class="caixa etapa verde">
+        <div class="num">receita 1</div>
+        <h3>Página monetizada</h3>
+        <p>Logo depois do cadastro ela cai numa página com anúncios. É o retorno imediato da aquisição.</p>
+      </div>
+      <div class="seta">→</div>
+      <div class="caixa etapa amarelo">
+        <div class="num">receita 2</div>
+        <h3>Retenção</h3>
+        <p>Enviamos e-mails com anúncios para a base. O clique leva de novo a uma página monetizada.</p>
+      </div>
+    </div>
+    <div class="chaves">
+      <span>Aquisição: gastamos para trazer leads.</span>
+      <span>Receita 1: paga parte do gasto na hora.</span>
+      <span>Receita 2: a base continua gerando receita depois.</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. As métricas que usamos no dia a dia</h2>
+    <div class="grade">
+      <div class="caixa termo"><b>CPM</b>: custo para exibir mil anúncios. Diz quanto pagamos pela audiência e muda o tipo de canal em que aparecemos.</div>
+      <div class="caixa termo"><b>CTR</b>: de cada 100 pessoas que veem o anúncio, quantas clicam.</div>
+      <div class="caixa termo"><b>Custo/conv e taxa de conversão</b>: quanto custa cada conversão e quantos cliques viram conversão.</div>
+      <div class="caixa termo"><b>ROAS</b>: receita dividida pelo gasto. É a métrica que decide se uma campanha se paga.</div>
+      <div class="caixa termo"><b>Canais</b>: sites e apps onde o anúncio aparece. Excluímos os que gastam sem retorno.</div>
+      <div class="caixa termo"><b>Pagar por conversão x volátil</b>: campanhas que só gastam quando há conversão, contra campanhas que compram a mídia direto.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. As três contas</h2>
+    <div class="grade">
+      <div class="caixa conta">
+        <h3>R01</h3>
+        <div class="tipo">quase toda paga por conversão, mais uma estrutura de geração de demanda</div>
+        <div class="rotulo">Como está</div>
+        <ul>
+          <li>Foco em manter estável</li>
+          <li>CPM médio alto, em torno de 2.500</li>
+          <li>Canais concentrados (ex.: Vitale Brasil)</li>
+          <li>5 campanhas de geração de demanda, cerca de 30% da estrutura, com ROAS ruim</li>
+        </ul>
+        <div class="rotulo">Atenção</div>
+        <ul>
+          <li>A receita da R01 no Cronos não bate com a planilha</li>
+        </ul>
+      </div>
+      <div class="caixa conta">
+        <h3>R03</h3>
+        <div class="tipo">campanhas pagas por conversão</div>
+        <div class="rotulo">Como está</div>
+        <ul>
+          <li>Voltou a gastar: 3 de 7 campanhas, todas imprimindo</li>
+          <li>Comprando nos nossos domínios (ex.: Genial Crédito)</li>
+          <li>Destravou só com anúncios estáticos</li>
+          <li>Responsivos com flag removidos; novos entrando</li>
+        </ul>
+        <div class="rotulo">Próximo passo</div>
+        <ul>
+          <li>Aumentar a compra e esticar o gasto</li>
+          <li>Com volume, voltar com adequação de conteúdo e exclusões</li>
+        </ul>
+      </div>
+      <div class="caixa conta">
+        <h3>R04</h3>
+        <div class="tipo">100% estrutura volátil</div>
+        <div class="rotulo">Como está</div>
+        <ul>
+          <li>Foco em manter estável</li>
+          <li>CPM mais barato, de 700 a 750 (algumas campanhas 1.000)</li>
+          <li>Canais mais diversos que a R01</li>
+          <li>ROAS real de 54% no Cronos em 22/11</li>
+        </ul>
+        <div class="rotulo">Atenção</div>
+        <ul>
+          <li>Com monetização melhor, já rendeu de 5% a 10% mais ROAS que a R01</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Direcionamento atual</h2>
+    <div class="caixa">
+      <ul>
+        <li>Manter a compra padronizada e seguir controlando o investimento</li>
+        <li>Toda estrutura nova sobe como geração de demanda focada em display; o display que existe é o que já rodava na R01 e na R04</li>
+        <li>Aumentar a compra na R03</li>
+        <li>Inserir novos criativos responsivos, que trazem a maior parte do gasto nas outras contas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Desafios em aberto</h2>
+    <div class="grade">
+      <div class="caixa alerta">
+        <h3>Rentabilidade</h3>
+        <ul class="termo">
+          <li>ROAS abaixo do normal: -30% é o histórico, -50% não é normal</li>
+          <li>Horários que não se pagam: 3h às 4h, 6h e 9h às 11h</li>
+          <li>O problema não é só tráfego: a monetização também pesa</li>
+        </ul>
+      </div>
+      <div class="caixa alerta">
+        <h3>Dados</h3>
+        <ul class="termo">
+          <li>Cronos e planilha divergem; a visão de operações parece somar a receita da retenção</li>
+          <li>Hipóteses: falha na marcação de conversão ou página nova não cadastrada</li>
+        </ul>
+      </div>
+      <div class="caixa alerta">
+        <h3>Entrega</h3>
+        <ul class="termo">
+          <li>Às vezes o GAM para de imprimir anúncios e a página fica sem receita</li>
+          <li>Página nova e rotas em alinhamento com o Igor</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. Ferramentas</h2>
+    <div class="caixa">
+      <ul>
+        <li>Google Ads (MCC): compra de mídia nas três contas</li>
+        <li>Cronos: receita, ROAS real e diagnóstico por operação e por conta</li>
+        <li>Planilha de controle: acompanhamento diário de gasto e receita</li>
+        <li>GAM: anúncios exibidos nas nossas páginas monetizadas</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="pendente">A complementar: metas de ROAS por conta, orçamento de cada uma, quem cuida de páginas, e-mails e retenção.</p>
+</div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "atualizado": "23/11/2026 às 08:29",
+  "atualizado": "23/11/2026 às 09:51",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -25,7 +25,7 @@
     {
       "nome": "Shein US",
       "tarefas": [
-        ["Daily de hoje: pontos para comunicar", [
+        ["Observações e pontos a comunicar na daily de 23/11", [
           "Otimizações olhando de 20/11 até hoje (dados da média do período)",
           "CTR ainda baixo, mas o custo/conv caiu 65,51% em relação a antes",
           "Taxa de conversão subiu 48,13%",
@@ -38,6 +38,9 @@
           "Próximo passo: esticar verticalmente as campanhas que mantive",
           "Dentro do limite, para ter mais conversões"
         ], "recolhido"],
+        ["Testar a segmentação otimizada para aumentar o CPM", [
+          "Ficar atento a outras métricas, como CVR e CTR"
+        ]],
         "Acompanhar o custo por conversão",
         "Entender o que na conta vai trazer um CTR maior neste primeiro momento"
       ]

@@ -1,5 +1,5 @@
 {
-  "atualizado": "23/11/2026 às 08:12",
+  "atualizado": "23/11/2026 às 08:26",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -70,6 +70,18 @@
     {
       "nome": "BG MX",
       "tarefas": [
+        ["Daily de hoje: pontos para comunicar", [
+          "Otimizações olhando o mesmo período, de 20/11 até hoje",
+          "Aqui já fazemos exclusões há mais tempo, considerando a taxa de conversão",
+          "Removi criativos caros, principalmente em campanhas com outros mais baratos",
+          "Alguns deles também eram vídeos gerados pela IA",
+          "Aqui o YouTube tem mais presença que na BG BR",
+          "Por causa dos vídeos que o time de criativos fez",
+          "Excluí canais (domínios) que identifiquei como do Roblox",
+          "Não olhei tanto a receita, porque está tudo meio ruim",
+          "O foco foi comprar em canais mais relacionados ao tema",
+          "Depois: comentar que a campanha não atribui o gasto às palavras específicas"
+        ]],
         ["Direcionamento da operação", [
           "Converter mais"
         ]],

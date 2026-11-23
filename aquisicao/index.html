@@ -78,173 +78,122 @@
     h1 { font-size: 28px; }
     .seta { transform: rotate(90deg); width: 100%; text-align: center; }
   }
+
+  /* Tabela comparando as três contas */
+  .tabela-wrap { overflow-x: auto; }
+  table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 820px; font-size: 18px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 2px dashed #d0d0d0; }
+  th { font-weight: 400; font-size: 24px; }
+  td:first-child { color: var(--suave); width: 190px; font-size: 17px; }
+  td { color: var(--detalhe); }
+  tr:last-child td { border-bottom: none; }
+  .col-r01 { background: var(--azul); }
+  .col-r03 { background: var(--verde); }
+  .col-r04 { background: var(--amarelo); }
+  .contexto { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; color: var(--detalhe); font-size: 18px; }
+  .contexto .caixa { padding: 4px 12px; }
+  .espectro { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 18px; color: var(--detalhe); margin-top: 6px; }
+  .espectro .linha { flex: 1 1 260px; border-top: 2px solid var(--tinta); position: relative; height: 0; margin: 0 6px; }
 </style>
 </head>
 <body>
 <div class="pagina">
   <header>
-    <h1>Aquisição JN US CC: como funciona e onde estamos</h1>
+    <h1>Aquisição JN US CC: a dinâmica das três contas</h1>
     <a href="../">voltar para as tarefas</a>
   </header>
-  <p class="intro">Resumo para a nova liderança. Operação de cartão de crédito nos EUA, com três contas de compra: R01, R03 e R04. Rascunho, em construção.</p>
+  <p class="intro">Para a nova liderança. Como cada conta de compra funciona, como elas se diferenciam e o que estamos fazendo em cada uma. Rascunho, em construção.</p>
 
   <section>
-    <h2>1. Como a operação gera dinheiro</h2>
-    <div class="fluxo">
-      <div class="caixa etapa azul">
-        <div class="num">aquisição</div>
-        <h3>Anúncio</h3>
-        <p>Compramos mídia programática no Google Ads (display e geração de demanda) e exibimos nossos anúncios.</p>
-      </div>
-      <div class="seta">→</div>
-      <div class="caixa etapa azul">
-        <div class="num">aquisição</div>
-        <h3>Clique</h3>
-        <p>A pessoa clica no anúncio e chega na nossa página.</p>
-      </div>
-      <div class="seta">→</div>
-      <div class="caixa etapa azul">
-        <div class="num">aquisição</div>
-        <h3>Lead</h3>
-        <p>Ela cadastra o e-mail. Esse cadastro é o lead.</p>
-      </div>
-      <div class="seta">→</div>
-      <div class="caixa etapa verde">
-        <div class="num">receita 1</div>
-        <h3>Página monetizada</h3>
-        <p>Logo depois do cadastro ela cai numa página com anúncios. É o retorno imediato da aquisição.</p>
-      </div>
-      <div class="seta">→</div>
-      <div class="caixa etapa amarelo">
-        <div class="num">receita 2</div>
-        <h3>Retenção</h3>
-        <p>Enviamos e-mails com anúncios para a base. O clique leva de novo a uma página monetizada.</p>
-      </div>
+    <h2>Contexto em uma linha</h2>
+    <div class="contexto">
+      <span class="caixa">Anúncio</span><span>→</span>
+      <span class="caixa">Clique</span><span>→</span>
+      <span class="caixa">Lead (e-mail)</span><span>→</span>
+      <span class="caixa">Página monetizada</span><span>→</span>
+      <span class="caixa">Retenção por e-mail</span>
     </div>
-    <div class="chaves">
-      <span>Aquisição: gastamos para trazer leads.</span>
-      <span>Receita 1: paga parte do gasto na hora.</span>
-      <span>Receita 2: a base continua gerando receita depois.</span>
+    <p class="suave" style="margin-top:10px">As três contas fazem a primeira parte: comprar mídia para gerar leads. A diferença entre elas está em como cada uma compra.</p>
+  </section>
+
+  <section>
+    <h2>1. As três lado a lado</h2>
+    <div class="tabela-wrap caixa" style="padding:6px">
+      <table>
+        <tr><td></td><th class="col-r01">R01</th><th class="col-r03">R03</th><th class="col-r04">R04</th></tr>
+        <tr><td>Como compra</td>
+          <td class="col-r01">Quase toda paga por conversão, mais uma estrutura de geração de demanda</td>
+          <td class="col-r03">Campanhas que pagam por conversão</td>
+          <td class="col-r04">100% volátil: compra a mídia direto, sem pagar por conversão</td></tr>
+        <tr><td>Campanhas</td>
+          <td class="col-r01">Display que já rodava + 5 de geração de demanda (cerca de 30% da estrutura)</td>
+          <td class="col-r03">7 campanhas pagas por conversão; 3 voltaram a gastar, todas imprimindo</td>
+          <td class="col-r04">Display que já rodava; estrutura nova entra como geração de demanda</td></tr>
+        <tr><td>CPM médio</td>
+          <td class="col-r01">Alto, em torno de 2.500</td>
+          <td class="col-r03">A complementar</td>
+          <td class="col-r04">Mais barato, de 700 a 750 (algumas campanhas 1.000)</td></tr>
+        <tr><td>Onde aparece</td>
+          <td class="col-r01">Canais concentrados (ex.: Vitale Brasil)</td>
+          <td class="col-r03">Nos nossos domínios (ex.: Genial Crédito)</td>
+          <td class="col-r04">Canais mais diversos</td></tr>
+        <tr><td>Criativos</td>
+          <td class="col-r01">Responsivos trazem a maior parte do gasto</td>
+          <td class="col-r03">Destravou só com estáticos; responsivos com flag removidos, novos entrando</td>
+          <td class="col-r04">Responsivos trazem a maior parte do gasto</td></tr>
+        <tr><td>Situação</td>
+          <td class="col-r01">Estável, mas a geração de demanda está com ROAS muito ruim</td>
+          <td class="col-r03">Voltou a gastar, ainda com volume baixo</td>
+          <td class="col-r04">Estável; ROAS real de 54% em 22/11</td></tr>
+        <tr><td>Objetivo agora</td>
+          <td class="col-r01">Manter estável e controlar o investimento</td>
+          <td class="col-r03">Aumentar a compra e esticar o gasto</td>
+          <td class="col-r04">Manter estável e controlar o investimento</td></tr>
+      </table>
     </div>
   </section>
 
   <section>
-    <h2>2. As métricas que usamos no dia a dia</h2>
+    <h2>2. Como as contas se relacionam</h2>
     <div class="grade">
-      <div class="caixa termo"><b>CPM</b>: custo para exibir mil anúncios. Diz quanto pagamos pela audiência e muda o tipo de canal em que aparecemos.</div>
-      <div class="caixa termo"><b>CTR</b>: de cada 100 pessoas que veem o anúncio, quantas clicam.</div>
-      <div class="caixa termo"><b>Custo/conv e taxa de conversão</b>: quanto custa cada conversão e quantos cliques viram conversão.</div>
-      <div class="caixa termo"><b>ROAS</b>: receita dividida pelo gasto. É a métrica que decide se uma campanha se paga.</div>
-      <div class="caixa termo"><b>Canais</b>: sites e apps onde o anúncio aparece. Excluímos os que gastam sem retorno.</div>
-      <div class="caixa termo"><b>Pagar por conversão x volátil</b>: campanhas que só gastam quando há conversão, contra campanhas que compram a mídia direto.</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>3. As três contas</h2>
-    <div class="grade">
-      <div class="caixa conta">
-        <h3>R01</h3>
-        <div class="tipo">quase toda paga por conversão, mais uma estrutura de geração de demanda</div>
-        <div class="rotulo">Como está</div>
-        <ul>
-          <li>Foco em manter estável</li>
-          <li>CPM médio alto, em torno de 2.500</li>
-          <li>Canais concentrados (ex.: Vitale Brasil)</li>
-          <li>5 campanhas de geração de demanda, cerca de 30% da estrutura, com ROAS ruim</li>
-        </ul>
-        <div class="rotulo">Atenção</div>
-        <ul>
-          <li>A receita da R01 no Cronos não bate com a planilha</li>
-        </ul>
+      <div class="caixa">
+        <h3>Dois perfis de compra: R01 x R04</h3>
+        <p class="termo">A R01 compra caro (CPM perto de 2.500) e em poucos canais. A R04 compra barato (700 a 750) e em canais variados. Ter os dois perfis rodando ao mesmo tempo serve para comparar: se um vai melhor, sabemos que o problema está no tipo de compra.</p>
+        <div class="espectro"><span>CPM alto, canais concentrados (R01)</span><span class="linha"></span><span>CPM baixo, canais diversos (R04)</span></div>
       </div>
-      <div class="caixa conta">
-        <h3>R03</h3>
-        <div class="tipo">campanhas pagas por conversão</div>
-        <div class="rotulo">Como está</div>
-        <ul>
-          <li>Voltou a gastar: 3 de 7 campanhas, todas imprimindo</li>
-          <li>Comprando nos nossos domínios (ex.: Genial Crédito)</li>
-          <li>Destravou só com anúncios estáticos</li>
-          <li>Responsivos com flag removidos; novos entrando</li>
-        </ul>
-        <div class="rotulo">Próximo passo</div>
-        <ul>
-          <li>Aumentar a compra e esticar o gasto</li>
-          <li>Com volume, voltar com adequação de conteúdo e exclusões</li>
-        </ul>
+      <div class="caixa">
+        <h3>O que a comparação mostra hoje</h3>
+        <p class="termo">Os dois perfis estão ruins, então o problema não é só tráfego: a monetização também pesa. Quando a monetização estava melhor, o perfil barato da R04 rendia de 5% a 10% mais ROAS, mesmo gastando menos.</p>
       </div>
-      <div class="caixa conta">
-        <h3>R04</h3>
-        <div class="tipo">100% estrutura volátil</div>
-        <div class="rotulo">Como está</div>
-        <ul>
-          <li>Foco em manter estável</li>
-          <li>CPM mais barato, de 700 a 750 (algumas campanhas 1.000)</li>
-          <li>Canais mais diversos que a R01</li>
-          <li>ROAS real de 54% no Cronos em 22/11</li>
-        </ul>
-        <div class="rotulo">Atenção</div>
-        <ul>
-          <li>Com monetização melhor, já rendeu de 5% a 10% mais ROAS que a R01</li>
-        </ul>
+      <div class="caixa">
+        <h3>R03: a aposta em pagar por conversão</h3>
+        <p class="termo">A R03 só gasta quando há conversão, então o risco é menor. Ela voltou a gastar quando passamos a comprar nos nossos domínios. O desafio é ganhar volume: com responsivos novos, a ideia é aumentar o ritmo de gasto e, com volume, voltar com adequação de conteúdo e exclusões de canais.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>4. Direcionamento atual</h2>
+    <h2>3. Regras que valem para as três</h2>
     <div class="caixa">
       <ul>
-        <li>Manter a compra padronizada e seguir controlando o investimento</li>
-        <li>Toda estrutura nova sobe como geração de demanda focada em display; o display que existe é o que já rodava na R01 e na R04</li>
-        <li>Aumentar a compra na R03</li>
-        <li>Inserir novos criativos responsivos, que trazem a maior parte do gasto nas outras contas</li>
+        <li>Compra padronizada e investimento controlado</li>
+        <li>Toda estrutura nova sobe como geração de demanda focada em display</li>
+        <li>Excluir canais e horários que gastam sem retorno (hoje não se pagam: 3h às 4h, 6h e 9h às 11h)</li>
+        <li>Acompanhar o ROAS real no Cronos: -30% é o normal histórico, -50% não é normal</li>
       </ul>
     </div>
   </section>
 
   <section>
-    <h2>5. Desafios em aberto</h2>
+    <h2>4. Pontos de atenção</h2>
     <div class="grade">
-      <div class="caixa alerta">
-        <h3>Rentabilidade</h3>
-        <ul class="termo">
-          <li>ROAS abaixo do normal: -30% é o histórico, -50% não é normal</li>
-          <li>Horários que não se pagam: 3h às 4h, 6h e 9h às 11h</li>
-          <li>O problema não é só tráfego: a monetização também pesa</li>
-        </ul>
-      </div>
-      <div class="caixa alerta">
-        <h3>Dados</h3>
-        <ul class="termo">
-          <li>Cronos e planilha divergem; a visão de operações parece somar a receita da retenção</li>
-          <li>Hipóteses: falha na marcação de conversão ou página nova não cadastrada</li>
-        </ul>
-      </div>
-      <div class="caixa alerta">
-        <h3>Entrega</h3>
-        <ul class="termo">
-          <li>Às vezes o GAM para de imprimir anúncios e a página fica sem receita</li>
-          <li>Página nova e rotas em alinhamento com o Igor</li>
-        </ul>
-      </div>
+      <div class="caixa alerta termo">A receita da R01 no Cronos não bate com a planilha. Hipóteses: falha na marcação de conversão ou página nova não cadastrada.</div>
+      <div class="caixa alerta termo">Às vezes o GAM para de imprimir anúncios e a página fica sem receita, o que afeta as três contas.</div>
+      <div class="caixa alerta termo">Página nova e rotas em alinhamento com o Igor, para melhorar o resultado da geração de demanda.</div>
     </div>
   </section>
 
-  <section>
-    <h2>6. Ferramentas</h2>
-    <div class="caixa">
-      <ul>
-        <li>Google Ads (MCC): compra de mídia nas três contas</li>
-        <li>Cronos: receita, ROAS real e diagnóstico por operação e por conta</li>
-        <li>Planilha de controle: acompanhamento diário de gasto e receita</li>
-        <li>GAM: anúncios exibidos nas nossas páginas monetizadas</li>
-      </ul>
-    </div>
-  </section>
-
-  <p class="pendente">A complementar: metas de ROAS por conta, orçamento de cada uma, quem cuida de páginas, e-mails e retenção.</p>
+  <p class="pendente">A complementar: CPM da R03, por que cada conta foi criada, metas de ROAS e orçamento de cada uma.</p>
 </div>
 </body>
 </html>

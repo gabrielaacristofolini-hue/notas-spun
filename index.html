@@ -27,9 +27,12 @@
     font: 20px/1.6 "Excalifont", "Segoe Print", "Comic Sans MS", cursive;
   }
   .pagina {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 48px 32px 64px;
+    margin: 0;
+    padding: 48px 48px 64px;
+  }
+  /* Em tela larga as linhas nunca quebram: o texto segue em frente. */
+  @media (min-width: 601px) {
+    li { white-space: nowrap; }
   }
 
   header {

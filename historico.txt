@@ -1,0 +1,69 @@
+HISTÓRICO DAS OPERAÇÕES (Notas Spun)
+Uma linha por registro, em ordem de tempo (o mais novo no fim). Horário de Brasília.
+Formato: dd/mm/aaaa HH:MM | OPERAÇÃO | TIPO | o que aconteceu
+Operações: JN US CC, JN US EMP, Roblox, Shein US, BG BR, BG MX, GERAL
+Tipos: FEITO, DADO, OBSERVAÇÃO, DECISÃO, DIRECIONAMENTO, PRÓXIMO PASSO, DÚVIDA, TAREFA NOVA, TAREFA REMOVIDA, COMUNICADO
+Os registros de 19/11 e de 23/11 até 10:15 foram reconstruídos a partir das conversas e das mudanças no site.
+
+19/11/2026 14:14 | GERAL | DECISÃO | Todas as tarefas e metas apagadas para recomeçar a lista do zero, por operação
+19/11/2026 14:16 | JN US CC | DIRECIONAMENTO | Manter a compra padronizada e seguir controlando o investimento
+19/11/2026 14:16 | JN US CC | DIRECIONAMENTO | Toda estrutura volátil nova deve ser geração de demanda focada em display
+19/11/2026 14:18 | Roblox | TAREFA NOVA | Acompanhar o desempenho dos públicos e segmentações em teste
+19/11/2026 14:18 | Roblox | TAREFA NOVA | Acompanhar a implementação do novo funil como um todo
+19/11/2026 14:18 | Roblox | TAREFA NOVA | Entender como o script está fazendo as exclusões (ver se não está excluindo mais do que deveria)
+19/11/2026 14:20 | Shein US | TAREFA NOVA | Acompanhar o custo por conversão
+19/11/2026 14:20 | Shein US | TAREFA NOVA | Entender o que na conta vai trazer um CTR maior neste primeiro momento
+19/11/2026 14:22 | BG BR | DIRECIONAMENTO | Gastar mais e converter mais
+19/11/2026 14:22 | BG BR | TAREFA NOVA | Acompanhar as conversões
+19/11/2026 14:22 | BG BR | TAREFA NOVA | Script de exclusão por taxa de conversão
+19/11/2026 14:24 | BG MX | DIRECIONAMENTO | Converter mais
+19/11/2026 14:24 | BG MX | TAREFA NOVA | Acompanhar o script de exclusão (ver se ele vai fazer mais exclusões de URLs)
+19/11/2026 14:24 | BG MX | TAREFA NOVA | Negativar os domínios que não estão interessantes (floor baixo, monetização ruim ou taxa de conversão muito baixa)
+23/11/2026 06:54 | JN US CC | TAREFA NOVA | Solicitar mais orçamento para a conta da R01 (para hoje)
+23/11/2026 07:05 | JN US CC | TAREFA NOVA | Inserir novos criativos responsivos (para hoje)
+23/11/2026 07:41 | Shein US | DADO | Otimização olhando de 20/11 até hoje: custo/conv caiu 65,51%, taxa de conversão subiu 48,13%, CPM caiu 58,21%, impressões subiram 395,20%, CTR ainda baixo
+23/11/2026 07:41 | Shein US | OBSERVAÇÃO | CPM menor e mais impressões ajudam a explicar o CTR menor e o custo/conv mais estável
+23/11/2026 07:41 | Shein US | FEITO | Pausei as campanhas com custo/conv mais caro e mantive as melhores
+23/11/2026 07:41 | Shein US | FEITO | Otimizei os criativos de cada campanha por CTR e custo/conv
+23/11/2026 07:41 | Shein US | OBSERVAÇÃO | Campanha de CPA desejado gasta pouco, mas está estável; gastou um pouco melhor em 22/11
+23/11/2026 07:41 | Shein US | PRÓXIMO PASSO | Esticar verticalmente as campanhas mantidas, dentro do limite, para ter mais conversões
+23/11/2026 08:09 | BG BR | DADO | De 20/11 até hoje: muito gasto em canais com pouca ou nenhuma conversão, o que puxa o custo/conv para cima
+23/11/2026 08:09 | BG BR | DADO | Cortando os canais abaixo de 20% de conversão, o custo/conv cai para R$ 0,50, mas perdemos metade do gasto do período
+23/11/2026 08:09 | BG BR | FEITO | Excluí os canais abaixo de 20% de conversão; seguir com essas exclusões
+23/11/2026 08:09 | BG BR | FEITO | Removi criativos caros olhando custo/conv e CTR, na maioria vídeos gerados pela IA da Demand Gen
+23/11/2026 08:09 | BG BR | FEITO | Desativei o recurso de vídeos gerados por IA para a campanha não criar outros
+23/11/2026 08:09 | BG BR | OBSERVAÇÃO | Alguns responsivos limitados por design enganoso, por causa de 1 ou 2 imagens
+23/11/2026 08:10 | BG BR | OBSERVAÇÃO | A média de CTR está baixa por causa dos anúncios da IA; fora eles, temos alguns anúncios com CTR um pouco maior
+23/11/2026 08:12 | BG BR | TAREFA REMOVIDA | Script de exclusão por taxa de conversão (já feito)
+23/11/2026 08:26 | BG MX | OBSERVAÇÃO | Aqui já fazemos exclusões há mais tempo, considerando a taxa de conversão
+23/11/2026 08:26 | BG MX | FEITO | Removi criativos caros, principalmente em campanhas com opções mais baratas; alguns eram vídeos gerados por IA
+23/11/2026 08:26 | BG MX | OBSERVAÇÃO | O YouTube tem mais presença que na BG BR, por causa dos vídeos feitos pelo time de criativos
+23/11/2026 08:26 | BG MX | FEITO | Excluí canais (domínios) que identifiquei como do Roblox, para focar em canais mais relacionados ao tema
+23/11/2026 08:26 | BG MX | OBSERVAÇÃO | Não olhei tanto a receita, porque está fraca no geral
+23/11/2026 08:27 | BG MX | DADO | Responsivo estático: CTR de 13,11% e taxa de conversão de 25,67%, custo/conv de R$ 0,54 (grupo segmentado por palavras, vale de gas)
+23/11/2026 08:27 | BG MX | DADO | Vídeos: CTR de 2,51% a 6,42%, taxa de conversão de 2,98% a 7,22%, custo/conv de R$ 0,37 a R$ 0,71
+23/11/2026 08:27 | BG MX | OBSERVAÇÃO | A campanha não atribui o gasto às palavras específicas (comentar depois)
+23/11/2026 09:51 | Shein US | DECISÃO | Combinado testar a segmentação otimizada para aumentar o CPM, de olho em CVR e CTR
+23/11/2026 09:54 | Shein US | OBSERVAÇÃO | Conta suspensa
+23/11/2026 09:54 | Shein US | TAREFA NOVA | Conseguir uma nova conta
+23/11/2026 09:54 | Shein US | TAREFA NOVA | Inserir novos criativos com frequência, principalmente em vídeo
+23/11/2026 09:54 | Shein US | TAREFA REMOVIDA | Acompanhar o custo por conversão
+23/11/2026 09:54 | Shein US | TAREFA REMOVIDA | Entender o que na conta vai trazer um CTR maior neste primeiro momento
+23/11/2026 09:57 | BG BR | DÚVIDA | Resolvida: com o adclick, a taxa de conversão pode passar de 100% (o superior confirmou que sim)
+23/11/2026 09:57 | BG BR | DIRECIONAMENTO | Converter mais, melhorando o custo/conv, o CVR e o CTR; em resumo, precisamos de mais conversões
+23/11/2026 09:57 | BG BR | TAREFA NOVA | Acompanhar o desempenho do script de exclusões que está rodando
+23/11/2026 09:57 | BG BR | TAREFA NOVA | Remover as imagens com flag de design enganoso
+23/11/2026 09:57 | BG BR | TAREFA REMOVIDA | Acompanhar as conversões
+23/11/2026 09:57 | BG BR | COMUNICADO | Pontos da daily não passados na reunião; texto preparado para enviar ao superior
+23/11/2026 10:03 | BG MX | DIRECIONAMENTO | Converter mais, melhorando o custo/conv, o CVR e o CTR; em resumo, precisamos de mais conversões
+23/11/2026 10:03 | BG MX | TAREFA NOVA | Acompanhar o desempenho do script de exclusões que está rodando
+23/11/2026 10:03 | BG MX | TAREFA NOVA | Negativar domínios que não estão monetizando bem (substitui a tarefa de negativar domínios não interessantes)
+23/11/2026 10:03 | BG MX | TAREFA REMOVIDA | Acompanhar o script de exclusão (ver se faz mais exclusões de URLs)
+23/11/2026 10:03 | BG MX | COMUNICADO | Pontos da daily não passados na reunião; texto preparado para enviar
+23/11/2026 10:14 | Roblox | OBSERVAÇÃO | O Canadá está com ROAS mais interessante
+23/11/2026 10:14 | Roblox | TAREFA NOVA | Acompanhar a compra no Canadá ao longo do dia
+23/11/2026 10:14 | Roblox | TAREFA NOVA | Acompanhar as exclusões e entender se o script está excluindo corretamente
+23/11/2026 10:14 | Roblox | TAREFA REMOVIDA | Entender como o script está fazendo as exclusões
+23/11/2026 10:15 | JN US CC | TAREFA REMOVIDA | Solicitar mais orçamento para a conta da R01 (vai ser feito na hora)
+23/11/2026 10:15 | JN US CC | TAREFA NOVA | Acompanhar a R03 e buscar gastar mais nela, para aumentar a compra
+23/11/2026 10:18 | GERAL | DECISÃO | Criado o historico.txt: tudo o que for passado passa a ser registrado com data, hora e operação

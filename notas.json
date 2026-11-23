@@ -1,5 +1,5 @@
 {
-  "atualizado": "23/11/2026 às 07:10",
+  "atualizado": "23/11/2026 às 07:41",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -25,6 +25,19 @@
     {
       "nome": "Shein US",
       "tarefas": [
+        ["Daily de hoje: pontos para comunicar", [
+          "Otimizações olhando de 20/11 até hoje (dados da média do período)",
+          "CTR ainda baixo, mas o custo/conv caiu 65,51% em relação a antes",
+          "Taxa de conversão subiu 48,13%",
+          "CPM caiu 58,21% e impressões subiram 395,20%",
+          "Isso ajuda a explicar o CTR menor e o custo/conv mais estável",
+          "Pausei as campanhas com custo/conv mais caro e mantive as melhores",
+          "Otimizei os criativos de cada campanha por CTR e custo/conv",
+          "Campanha de CPA desejado gasta pouco, mas está estável",
+          "Ela gastou um pouco melhor ontem",
+          "Próximo passo: esticar verticalmente as campanhas que mantive",
+          "Dentro do limite, para ter mais conversões"
+        ]],
         "Acompanhar o custo por conversão",
         "Entender o que na conta vai trazer um CTR maior neste primeiro momento"
       ]

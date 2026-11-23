@@ -1,5 +1,5 @@
 {
-  "atualizado": "23/11/2026 às 09:54",
+  "atualizado": "23/11/2026 às 09:57",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -43,7 +43,6 @@
           "Isso joga o custo/conv para cima, ou impede que ele caia",
           "Cortando canais abaixo de 20% de conversão, o custo/conv cai para R$ 0,50",
           "Mas perdemos metade do gasto no período",
-          "Dúvida: por causa do adclick, a taxa de conversão pode passar de 100%?",
           "Excluí canais abaixo dessa média de 20% e vou seguir com essas exclusões",
           "Nos anúncios, removi hoje criativos caros olhando custo/conv e CTR",
           "Na maioria, vídeos gerados pela IA da própria Demand Gen",
@@ -54,9 +53,10 @@
           "Ainda vou remover essas imagens"
         ], "recolhido"],
         ["Direcionamento da operação", [
-          "Gastar mais e converter mais"
-        ]],
-        "Acompanhar as conversões"
+          "Converter mais, melhorando o custo/conv, o CVR e o CTR",
+          "Em resumo, precisamos de mais conversões",
+          "Acompanhar o desempenho do script de exclusões que está rodando agora"
+        ]]
       ]
     },
     {

@@ -71,79 +71,7 @@
 </div>
 
 <script>
-  // ============================================================
-  //  OPERAÇÕES: edite só esta parte.
-  //  Item com detalhes: ["Título", ["linha 1", "linha 2"]].
-  //  As metas ficam guardadas aqui, mas não aparecem no layout atual.
-  // ============================================================
-  const ATUALIZADO = "23/11/2026 às 06:54";
-
-  const OPERACOES = [
-    {
-      nome: "JN US CC",
-      metas: [],
-      tarefas: [
-        "Hoje: solicitar mais orçamento para a conta da R01",
-        ["Direcionamento da operação", [
-          "Manter a compra padronizada e seguir controlando o investimento",
-          "Toda estrutura volátil nova deve ser geração de demanda focada em display",
-        ]],
-      ],
-    },
-    {
-      nome: "Roblox",
-      metas: [],
-      tarefas: [
-        "Acompanhar o desempenho dos públicos e segmentações em teste",
-        "Acompanhar a implementação do novo funil como um todo",
-        ["Entender como o script está fazendo as exclusões", [
-          "Ver se não está exagerando e excluindo mais do que deveria",
-        ]],
-      ],
-    },
-    {
-      nome: "Shein US",
-      metas: [],
-      tarefas: [
-        "Acompanhar o custo por conversão",
-        "Entender o que na conta vai trazer um CTR maior neste primeiro momento",
-      ],
-    },
-    {
-      nome: "BG BR",
-      metas: [],
-      tarefas: [
-        ["Direcionamento da operação", [
-          "Gastar mais e converter mais",
-        ]],
-        "Acompanhar as conversões",
-        ["Inserir script que exclui canais com base na taxa de conversão", [
-          "Para oxigenar as campanhas com mais conversões",
-        ]],
-      ],
-    },
-    {
-      nome: "BG MX",
-      metas: [],
-      tarefas: [
-        ["Direcionamento da operação", [
-          "Converter mais",
-        ]],
-        ["Acompanhar o script de exclusão", [
-          "Ver se ele vai fazer mais exclusões de URLs",
-        ]],
-        ["Negativar os domínios atuais que não estão interessantes", [
-          "Floor baixo ou monetização ruim",
-          "Taxa de conversão muito baixa",
-        ]],
-      ],
-    },
-  ];
-  // ============================================================
-
-  const [dia, hora] = ATUALIZADO.split(" às ");
-  document.getElementById("atualizado").textContent = `atualizado em ${dia} às ${hora}`;
-
+  // Os dados ficam em notas.json. Este arquivo só desenha a página.
   function el(tag, classe, texto) {
     const no = document.createElement(tag);
     if (classe) no.className = classe;
@@ -152,24 +80,34 @@
   }
 
   const quadro = document.getElementById("quadro");
-  if (!OPERACOES.length) quadro.append(el("p", "vazio", "Nada anotado ainda."));
-  OPERACOES.forEach(op => {
-    const secao = el("section");
-    const ul = el("ul");
-    if (!op.tarefas.length) ul.append(el("li", "vazio", "Sem tarefas abertas"));
-    op.tarefas.forEach(item => {
-      const [titulo, detalhes] = typeof item === "string" ? [item, []] : item;
-      const li = el("li", "", titulo);
-      if (detalhes.length) {
-        const sub = el("ul", "detalhes");
-        detalhes.forEach(linha => sub.append(el("li", "", linha)));
-        li.append(sub);
-      }
-      ul.append(li);
+
+  function desenhar({ atualizado, operacoes }) {
+    const [dia, hora] = atualizado.split(" às ");
+    document.getElementById("atualizado").textContent = `atualizado em ${dia} às ${hora}`;
+    if (!operacoes.length) quadro.append(el("p", "vazio", "Nada anotado ainda."));
+    operacoes.forEach(op => {
+      const secao = el("section");
+      const ul = el("ul");
+      if (!op.tarefas.length) ul.append(el("li", "vazio", "Sem tarefas abertas"));
+      op.tarefas.forEach(item => {
+        const [titulo, detalhes] = typeof item === "string" ? [item, []] : item;
+        const li = el("li", "", titulo);
+        if (detalhes.length) {
+          const sub = el("ul", "detalhes");
+          detalhes.forEach(linha => sub.append(el("li", "", linha)));
+          li.append(sub);
+        }
+        ul.append(li);
+      });
+      secao.append(el("h2", "", op.nome), ul);
+      quadro.append(secao);
     });
-    secao.append(el("h2", "", op.nome), ul);
-    quadro.append(secao);
-  });
+  }
+
+  fetch("notas.json?t=" + Date.now(), { cache: "no-store" })
+    .then(r => r.json())
+    .then(desenhar)
+    .catch(() => quadro.append(el("p", "vazio", "Não foi possível carregar as notas.")));
 </script>
 </body>
 </html>

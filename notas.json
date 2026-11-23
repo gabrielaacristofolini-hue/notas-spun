@@ -1,0 +1,59 @@
+{
+  "atualizado": "23/11/2026 às 06:54",
+  "operacoes": [
+    {
+      "nome": "JN US CC",
+      "tarefas": [
+        "Hoje: solicitar mais orçamento para a conta da R01",
+        ["Direcionamento da operação", [
+          "Manter a compra padronizada e seguir controlando o investimento",
+          "Toda estrutura volátil nova deve ser geração de demanda focada em display"
+        ]]
+      ]
+    },
+    {
+      "nome": "Roblox",
+      "tarefas": [
+        "Acompanhar o desempenho dos públicos e segmentações em teste",
+        "Acompanhar a implementação do novo funil como um todo",
+        ["Entender como o script está fazendo as exclusões", [
+          "Ver se não está exagerando e excluindo mais do que deveria"
+        ]]
+      ]
+    },
+    {
+      "nome": "Shein US",
+      "tarefas": [
+        "Acompanhar o custo por conversão",
+        "Entender o que na conta vai trazer um CTR maior neste primeiro momento"
+      ]
+    },
+    {
+      "nome": "BG BR",
+      "tarefas": [
+        ["Direcionamento da operação", [
+          "Gastar mais e converter mais"
+        ]],
+        "Acompanhar as conversões",
+        ["Inserir script que exclui canais com base na taxa de conversão", [
+          "Para oxigenar as campanhas com mais conversões"
+        ]]
+      ]
+    },
+    {
+      "nome": "BG MX",
+      "tarefas": [
+        ["Direcionamento da operação", [
+          "Converter mais"
+        ]],
+        ["Acompanhar o script de exclusão", [
+          "Ver se ele vai fazer mais exclusões de URLs"
+        ]],
+        ["Negativar os domínios atuais que não estão interessantes", [
+          "Floor baixo ou monetização ruim",
+          "Taxa de conversão muito baixa"
+        ]]
+      ]
+    }
+  ]
+}

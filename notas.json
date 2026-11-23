@@ -1,10 +1,12 @@
 {
-  "atualizado": "23/11/2026 às 10:14",
+  "atualizado": "23/11/2026 às 10:15",
   "operacoes": [
     {
       "nome": "JN US CC",
       "tarefas": [
-        "Hoje: solicitar mais orçamento para a conta da R01",
+        ["Acompanhar a R03 e buscar gastar mais nela", [
+          "Precisamos aumentar a compra nela"
+        ]],
         "Hoje: inserir novos criativos responsivos",
         ["Direcionamento da operação", [
           "Manter a compra padronizada e seguir controlando o investimento",

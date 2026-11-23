@@ -1,5 +1,5 @@
 {
-  "atualizado": "23/11/2026 às 10:03",
+  "atualizado": "23/11/2026 às 10:13",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -37,6 +37,11 @@
     {
       "nome": "BG BR",
       "tarefas": [
+        ["Feito hoje", [
+          "Excluí os canais abaixo de 20% de conversão e sigo com essas exclusões",
+          "Removi criativos caros olhando custo/conv e CTR, a maioria vídeos gerados pela IA da Demand Gen",
+          "Desativei esse recurso para a campanha não criar outros"
+        ], "recolhido"],
         "Remover as imagens com flag de design enganoso",
         ["Direcionamento da operação", [
           "Converter mais, melhorando o custo/conv, o CVR e o CTR",
@@ -48,6 +53,10 @@
     {
       "nome": "BG MX",
       "tarefas": [
+        ["Feito hoje", [
+          "Removi criativos caros, principalmente em campanhas com opções mais baratas",
+          "Excluí canais (domínios) que identifiquei como do Roblox"
+        ], "recolhido"],
         ["Direcionamento da operação", [
           "Converter mais, melhorando o custo/conv, o CVR e o CTR",
           "Em resumo, precisamos de mais conversões",

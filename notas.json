@@ -1,5 +1,5 @@
 {
-  "atualizado": "23/11/2026 às 10:13",
+  "atualizado": "23/11/2026 às 10:14",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -17,9 +17,10 @@
       "tarefas": [
         "Acompanhar o desempenho dos públicos e segmentações em teste",
         "Acompanhar a implementação do novo funil como um todo",
-        ["Entender como o script está fazendo as exclusões", [
-          "Ver se não está exagerando e excluindo mais do que deveria"
-        ]]
+        ["Acompanhar a compra no Canadá", [
+          "O ROAS está mais interessante, ver como fica ao longo do dia"
+        ]],
+        "Acompanhar as exclusões e entender se o script está excluindo corretamente"
       ]
     },
     {

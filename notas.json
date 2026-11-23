@@ -1,5 +1,5 @@
 {
-  "atualizado": "23/11/2026 às 10:02",
+  "atualizado": "23/11/2026 às 10:03",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -48,30 +48,12 @@
     {
       "nome": "BG MX",
       "tarefas": [
-        ["Daily de hoje: pontos para comunicar", [
-          "Otimizações olhando o mesmo período, de 20/11 até hoje",
-          "Aqui já fazemos exclusões há mais tempo, considerando a taxa de conversão",
-          "Removi criativos caros, principalmente em campanhas com outros mais baratos",
-          "Alguns deles também eram vídeos gerados pela IA",
-          "Aqui o YouTube tem mais presença que na BG BR",
-          "Por causa dos vídeos que o time de criativos fez",
-          "Excluí canais (domínios) que identifiquei como do Roblox",
-          "Não olhei tanto a receita, porque está tudo meio ruim",
-          "O foco foi comprar em canais mais relacionados ao tema",
-          "Observação: estáticos com CTR e taxa de conversão bem maiores que os vídeos",
-          "Responsivo estático: CTR de 13,11% e taxa de conversão de 25,67%",
-          "Vídeos: CTR de 2,51% a 6,42% e taxa de conversão de 2,98% a 7,22%",
-          "Custo/conv parecido: R$ 0,54 no estático e de R$ 0,37 a R$ 0,71 nos vídeos",
-          "O estático está no grupo segmentado por palavras (vale de gas)",
-          "Depois: comentar que a campanha não atribui o gasto às palavras específicas"
-        ], "recolhido"],
         ["Direcionamento da operação", [
-          "Converter mais"
+          "Converter mais, melhorando o custo/conv, o CVR e o CTR",
+          "Em resumo, precisamos de mais conversões",
+          "Acompanhar o desempenho do script de exclusões que está rodando agora"
         ]],
-        ["Acompanhar o script de exclusão", [
-          "Ver se ele vai fazer mais exclusões de URLs"
-        ]],
-        ["Negativar os domínios atuais que não estão interessantes", [
+        ["Negativar domínios que não estão monetizando bem", [
           "Floor baixo ou monetização ruim",
           "Taxa de conversão muito baixa"
         ]]

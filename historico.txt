@@ -72,3 +72,5 @@ Os registros de 19/11 e de 23/11 até 10:15 foram reconstruídos a partir das co
 23/11/2026 10:27 | Shein US | TAREFA NOVA | Depois do teste de segmentação otimizada, testar campanha com meta de CPM e orçamento de R$ 250, só se a segmentação não resolver (combinado na daily)
 23/11/2026 11:13 | JN US CC | COMUNICADO | Criada a página /aquisicao para explicar a aquisição (R01, R03, R04) à nova liderança, por causa da mudança de squad
 23/11/2026 11:29 | JN US CC | COMUNICADO | Página /aquisicao reorganizada em torno da dinâmica das três contas (R01, R03, R04)
+24/11/2026 11:39 | Shein US | DECISÃO | Tarefas removidas do site: a operação não vai ser tocada no momento
+24/11/2026 11:39 | BG MX | DECISÃO | Tarefas removidas do site: a operação não vai ser tocada no momento

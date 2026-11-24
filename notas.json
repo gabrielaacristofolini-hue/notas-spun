@@ -1,5 +1,5 @@
 {
-  "atualizado": "23/11/2026 às 11:29",
+  "atualizado": "24/11/2026 às 11:39",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -7,7 +7,7 @@
         ["Acompanhar a R03 e buscar gastar mais nela", [
           "Precisamos aumentar a compra nela"
         ]],
-        "Hoje: inserir novos criativos responsivos",
+        "Inserir novos criativos responsivos",
         ["Direcionamento da operação", [
           "Manter a compra padronizada e seguir controlando o investimento",
           "Toda estrutura volátil nova deve ser geração de demanda focada em display"
@@ -26,21 +26,6 @@
       ]
     },
     {
-      "nome": "Shein US",
-      "tarefas": [
-        ["Testar a segmentação otimizada para aumentar o CPM", [
-          "Ficar atento a outras métricas, como CVR e CTR"
-        ]],
-        ["Depois do teste de segmentação otimizada: testar campanha com meta de CPM", [
-          "Orçamento de R$ 250, só se a segmentação otimizada não resolver"
-        ]],
-        "Conta suspensa: conseguir uma nova conta",
-        ["Inserir novos criativos com frequência", [
-          "Principalmente criativos em vídeo"
-        ]]
-      ]
-    },
-    {
       "nome": "BG BR",
       "tarefas": [
         ["Feito hoje", [
@@ -53,25 +38,6 @@
           "Converter mais, melhorando o custo/conv, o CVR e o CTR",
           "Em resumo, precisamos de mais conversões",
           "Acompanhar o desempenho do script de exclusões que está rodando agora"
-        ]]
-      ]
-    },
-    {
-      "nome": "BG MX",
-      "tarefas": [
-        "Operação pausada por enquanto",
-        ["Feito hoje", [
-          "Removi criativos caros, principalmente em campanhas com opções mais baratas",
-          "Excluí canais (domínios) que identifiquei como do Roblox"
-        ], "recolhido"],
-        ["Direcionamento da operação", [
-          "Converter mais, melhorando o custo/conv, o CVR e o CTR",
-          "Em resumo, precisamos de mais conversões",
-          "Acompanhar o desempenho do script de exclusões que está rodando agora"
-        ]],
-        ["Negativar domínios que não estão monetizando bem", [
-          "Floor baixo ou monetização ruim",
-          "Taxa de conversão muito baixa"
         ]]
       ]
     }

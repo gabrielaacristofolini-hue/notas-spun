@@ -1,5 +1,5 @@
 {
-  "atualizado": "25/11/2026 às 06:50",
+  "atualizado": "25/11/2026 às 06:51",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -22,7 +22,6 @@
     {
       "nome": "BG BR",
       "tarefas": [
-        "Remover as imagens com flag de design enganoso",
         ["Direcionamento da operação", [
           "Converter mais, melhorando o custo/conv, o CVR e o CTR",
           "Em resumo, precisamos de mais conversões",

@@ -79,3 +79,6 @@ Os registros de 19/11 e de 23/11 até 10:15 foram reconstruídos a partir das co
 25/11/2026 06:51 | BG BR | TAREFA REMOVIDA | Remover as imagens com flag de design enganoso
 25/11/2026 06:51 | BG BR | DIRECIONAMENTO | Removida a linha: converter mais, melhorando o custo/conv, o CVR e o CTR
 25/11/2026 06:51 | BG BR | TAREFA REMOVIDA | Acompanhar o desempenho do script de exclusões que está rodando
+25/11/2026 15:03 | JN US CC | DIRECIONAMENTO | Meta passada: R01 deve atingir R$ 20 mil de investimento até terça, 01/12 (cerca de 5 dias)
+25/11/2026 15:03 | JN US CC | TAREFA NOVA | R01: para a meta de investimento, aumentar a estrutura, inserir novos criativos responsivos (tarefa vinculada à escala) e acompanhar o ROAS
+25/11/2026 15:03 | JN US CC | TAREFA NOVA | R01: iniciar hoje, mais tarde, testes de campanhas com meta de conversão de compra

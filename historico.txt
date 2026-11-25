@@ -77,3 +77,4 @@ Os registros de 19/11 e de 23/11 até 10:15 foram reconstruídos a partir das co
 25/11/2026 06:50 | JN US CC | TAREFA NOVA | R03: destravar as campanhas que pagam por conversão (substitui acompanhar a R03 e gastar mais nela)
 25/11/2026 06:50 | Roblox | TAREFA REMOVIDA | Acompanhar a implementação do novo funil; acompanhar as exclusões e se o script exclui corretamente
 25/11/2026 06:51 | BG BR | TAREFA REMOVIDA | Remover as imagens com flag de design enganoso
+25/11/2026 06:51 | BG BR | DIRECIONAMENTO | Removida a linha: converter mais, melhorando o custo/conv, o CVR e o CTR

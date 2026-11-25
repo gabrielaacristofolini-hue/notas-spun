@@ -1,12 +1,10 @@
 {
-  "atualizado": "24/11/2026 às 11:39",
+  "atualizado": "25/11/2026 às 06:50",
   "operacoes": [
     {
       "nome": "JN US CC",
       "tarefas": [
-        ["Acompanhar a R03 e buscar gastar mais nela", [
-          "Precisamos aumentar a compra nela"
-        ]],
+        "R03: destravar as campanhas que pagam por conversão",
         "Inserir novos criativos responsivos",
         ["Direcionamento da operação", [
           "Manter a compra padronizada e seguir controlando o investimento",
@@ -18,21 +16,12 @@
       "nome": "Roblox",
       "tarefas": [
         "Acompanhar o desempenho dos públicos e segmentações em teste",
-        "Acompanhar a implementação do novo funil como um todo",
-        ["Acompanhar a compra no Canadá", [
-          "O ROAS está mais interessante, ver como fica ao longo do dia"
-        ]],
-        "Acompanhar as exclusões e entender se o script está excluindo corretamente"
+        "Acompanhar a compra no Canadá"
       ]
     },
     {
       "nome": "BG BR",
       "tarefas": [
-        ["Feito hoje", [
-          "Excluí os canais abaixo de 20% de conversão e sigo com essas exclusões",
-          "Removi criativos caros olhando custo/conv e CTR, a maioria vídeos gerados pela IA da Demand Gen",
-          "Desativei esse recurso para a campanha não criar outros"
-        ], "recolhido"],
         "Remover as imagens com flag de design enganoso",
         ["Direcionamento da operação", [
           "Converter mais, melhorando o custo/conv, o CVR e o CTR",

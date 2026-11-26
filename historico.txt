@@ -82,3 +82,4 @@ Os registros de 19/11 e de 23/11 até 10:15 foram reconstruídos a partir das co
 25/11/2026 15:03 | JN US CC | DIRECIONAMENTO | Meta passada: R01 deve atingir R$ 20 mil de investimento até terça, 01/12 (cerca de 5 dias)
 25/11/2026 15:03 | JN US CC | TAREFA NOVA | R01: para a meta de investimento, aumentar a estrutura, inserir novos criativos responsivos (tarefa vinculada à escala) e acompanhar o ROAS
 25/11/2026 15:03 | JN US CC | TAREFA NOVA | R01: iniciar hoje, mais tarde, testes de campanhas com meta de conversão de compra
+26/11/2026 10:35 | JN US CC | TAREFA NOVA | Iniciar a operação na Alemanha na segunda, 30/11: conseguir acesso às contas e definir o funil

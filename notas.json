@@ -1,5 +1,5 @@
 {
-  "atualizado": "25/11/2026 às 15:04",
+  "atualizado": "26/11/2026 às 10:35",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -11,6 +11,10 @@
         ]],
         "Hoje, mais tarde: iniciar na R01 testes de campanhas com meta de conversão de compra",
         "R03: destravar as campanhas que pagam por conversão",
+        ["Iniciar a operação na Alemanha na segunda (30/11)", [
+          "Conseguir acesso às contas",
+          "Definir o funil"
+        ]],
         ["Direcionamento da operação", [
           "Manter a compra padronizada e seguir controlando o investimento",
           "Toda estrutura volátil nova deve ser geração de demanda focada em display"

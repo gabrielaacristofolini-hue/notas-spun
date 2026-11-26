@@ -87,3 +87,4 @@ Os registros de 19/11 e de 23/11 até 10:15 foram reconstruídos a partir das co
 26/11/2026 12:09 | JN US CC | FEITO | R03: campanhas que pagam por conversão destravaram
 26/11/2026 12:09 | JN US CC | TAREFA NOVA | R03: controlar o CPA e a compra além dos canais do grupo SPUN
 26/11/2026 12:09 | JN US CC | TAREFA REMOVIDA | Direcionamento da operação (compra padronizada; estrutura volátil nova como geração de demanda em display)
+26/11/2026 12:10 | JN DE CC | DECISÃO | Operação da Alemanha (JN DE CC) separada da JN US CC; tarefa: iniciar na segunda, 30/11, com acesso às contas e funil definido e construído

@@ -1,5 +1,5 @@
 {
-  "atualizado": "26/11/2026 às 12:09",
+  "atualizado": "26/11/2026 às 12:10",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -10,8 +10,13 @@
           "Acompanhar o desempenho do ROAS"
         ]],
         "R01: acompanhar os testes de campanhas com meta de conversão de compra",
-        "R03: controlar o CPA e a compra além dos canais do grupo SPUN",
-        ["Iniciar a operação na Alemanha na segunda (30/11)", [
+        "R03: controlar o CPA e a compra além dos canais do grupo SPUN"
+      ]
+    },
+    {
+      "nome": "JN DE CC",
+      "tarefas": [
+        ["Iniciar a operação na segunda (30/11)", [
           "Conseguir acesso às contas",
           "Definir e construir o funil"
         ]]

@@ -1,5 +1,5 @@
 {
-  "atualizado": "26/11/2026 às 10:35",
+  "atualizado": "26/11/2026 às 12:09",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -9,15 +9,11 @@
           "Inserir novos criativos responsivos",
           "Acompanhar o desempenho do ROAS"
         ]],
-        "Hoje, mais tarde: iniciar na R01 testes de campanhas com meta de conversão de compra",
-        "R03: destravar as campanhas que pagam por conversão",
+        "R01: acompanhar os testes de campanhas com meta de conversão de compra",
+        "R03: controlar o CPA e a compra além dos canais do grupo SPUN",
         ["Iniciar a operação na Alemanha na segunda (30/11)", [
           "Conseguir acesso às contas",
-          "Definir o funil"
-        ]],
-        ["Direcionamento da operação", [
-          "Manter a compra padronizada e seguir controlando o investimento",
-          "Toda estrutura volátil nova deve ser geração de demanda focada em display"
+          "Definir e construir o funil"
         ]]
       ]
     },

@@ -1,16 +1,17 @@
 {
-  "atualizado": "26/11/2026 às 12:10",
+  "atualizado": "27/11/2026 às 14:23",
   "operacoes": [
     {
       "nome": "JN US CC",
       "tarefas": [
-        ["R01: atingir R$ 20 mil de investimento até terça (01/12)", [
+        ["Atingir R$ 20 mil de investimento na operação até terça (01/12)", [
+          "Foco na R01, mas não só nela",
           "Aumentar a estrutura",
           "Inserir novos criativos responsivos",
           "Acompanhar o desempenho do ROAS"
         ]],
         "R01: acompanhar os testes de campanhas com meta de conversão de compra",
-        "R03: controlar o CPA e a compra além dos canais do grupo SPUN"
+        "Lembrete R03: não temos exclusão dos canais de compra do grupo SPUN"
       ]
     },
     {
@@ -27,14 +28,6 @@
       "tarefas": [
         "Acompanhar o desempenho dos públicos e segmentações em teste",
         "Acompanhar a compra no Canadá"
-      ]
-    },
-    {
-      "nome": "BG BR",
-      "tarefas": [
-        ["Direcionamento da operação", [
-          "Em resumo, precisamos de mais conversões"
-        ]]
       ]
     }
   ]

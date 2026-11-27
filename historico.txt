@@ -91,3 +91,4 @@ Os registros de 19/11 e de 23/11 até 10:15 foram reconstruídos a partir das co
 27/11/2026 14:23 | JN US CC | DIRECIONAMENTO | A meta de R$ 20 mil de investimento até 01/12 é da JN US CC inteira: foco na R01, mas não só nela
 27/11/2026 14:23 | JN US CC | OBSERVAÇÃO | R03: não temos exclusão dos canais de compra do grupo SPUN (lembrete no lugar da tarefa de controlar o CPA)
 27/11/2026 14:23 | BG BR | DECISÃO | Seção removida do site
+27/11/2026 14:25 | JN DE CC | TAREFA NOVA | Criar e configurar o overlay; configurar o rebid

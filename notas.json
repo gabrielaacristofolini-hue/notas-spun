@@ -1,5 +1,5 @@
 {
-  "atualizado": "27/11/2026 às 14:24",
+  "atualizado": "27/11/2026 às 14:25",
   "operacoes": [
     {
       "nome": "JN US CC",
@@ -19,7 +19,9 @@
       "tarefas": [
         ["Iniciar a operação na segunda (30/11)", [
           "Conseguir acesso às contas",
-          "Definir e construir o funil"
+          "Definir e construir o funil",
+          "Criar e configurar o overlay",
+          "Configurar o rebid"
         ]]
       ]
     },
